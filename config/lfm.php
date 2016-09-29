@@ -29,8 +29,8 @@ return [
     'shared_folder_name'    => 'shares',
     'thumb_folder_name'     => 'thumbs',
 
-    'images_dir'            => 'public/photos/',
-    'images_url'            => '/photos/',
+    'images_dir'            => 'public/images/',
+    'images_url'            => '/images/',
 
     'files_dir'             => 'public/files/',
     'files_url'             => '/files/',
