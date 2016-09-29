@@ -12,9 +12,9 @@
 
         @include('layouts._navigation')
 
-        @include('layouts._a2a')
-    
     <div class="container-fluid">
+
+        @include('layouts._a2a')
 
         @include('errors.error')
 

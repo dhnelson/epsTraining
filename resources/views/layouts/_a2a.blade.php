@@ -40,11 +40,5 @@
 var a2a_config = a2a_config || {};
 a2a_config.onclick = 1;
 </script>
-<script async src="https://static.addtoany.com/menu/page.js"></script>
 
-<!--
-<div class="btn btn-sm btn-default"><i class="fa fa-user-plus"></i> Follow</div>&nbsp; 
-<a class="a2a_button_facebook" data-a2a-follow="Evolution-Performance-Systems"></a>
-<a class="a2a_button_instagram" data-a2a-follow="eps_training"></a>
-<a class="a2a_button_snapchat" data-a2a-follow="teamsnapchat"></a>
--->
+<script async src="https://static.addtoany.com/menu/page.js"></script>
