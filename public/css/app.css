@@ -10,16 +10,12 @@ body {
 .navbar-inverse, .nav.navbar-nav li a {
   color: #E31E19; }
 
-.sidenav {
-  background-color: #f1f1f1;
-  height: 100%; }
-
 footer {
   position: relative;
   bottom: -20px;
   margin-bottom: -100px; }
 
-#my_centered_buttons {
+#social_share_buttons {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -28,13 +24,7 @@ footer {
 .copyright-padding {
   padding-right: 20px; }
 
-.post-body-padding {
-  padding: 15px 0 15px 0; }
-
-.single-post-body-padding {
-  padding: 5px 0 15px 0; }
-
-.red, h1, h2, h3 {
+.red, h1, h2, h3, h4 {
   color: #E31E19; }
 
 p > iframe {
@@ -45,6 +35,52 @@ p > iframe {
   width: 100%;
   height: 400px;
   background-color: grey; }
+
+.btn-h1-spacing {
+  margin-top: 15px; }
+
+.form-spacing-top, .edit-box-spacing {
+  margin-top: 25px; }
+
+#heading h5, h5, h4, h4 {
+  display: inline; }
+
+@media screen and (min-width: 750px) {
+  .contact-box-spacing {
+    margin-top: 80px; } }
+
+@media screen and (min-width: 750px) {
+  .location-box-spacing {
+    margin-top: 50px; } }
+
+.blog-index-sidebar {
+  height: 100%;
+  background-color: #E9E9E9;
+  margin-top: 25px;
+  border-radius: 25px; }
+
+.post-body-padding {
+  padding: 15px 0 15px 0; }
+
+.single-post-body-padding {
+  padding: 5px 0 15px 0; }
+
+.blog-title-image-spacing {
+  display: inline-block;
+  vertical-align: middle; }
+
+.blog-image-spacing {
+  padding-right: 10px; }
+
+@media screen and (max-width: 750px) {
+  .blog-image-spacing > img {
+    height: 200px;
+    width: 350px;
+    width: 100%; } }
+
+@media screen and (min-width: 750px) {
+  #post-title-spacing {
+    margin: -10px 0 -5px 0; } }
 
 @media screen and (min-width: 750px) {
   .carousel {
@@ -80,26 +116,6 @@ p > iframe {
 
 .table tbody tr:hover td, .table tbody tr:hover th {
   background-color: #E31E19; }
-
-.btn-h1-spacing {
-  margin-top: 15px; }
-
-.form-spacing-top, .edit-box-spacing {
-  margin-top: 25px; }
-
-.post-title-spacing {
-  margin: -4px 0px 20px 80px; }
-
-@media screen and (min-width: 750px) {
-  .contact-box-spacing {
-    margin-top: 80px; } }
-
-@media screen and (min-width: 750px) {
-  .location-box-spacing {
-    margin-top: 50px; } }
-
-#heading h5, h5, h4, h4 {
-  display: inline; }
 
 .comment {
   margin-bottom: 45px; }

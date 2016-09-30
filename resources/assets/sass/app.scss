@@ -15,18 +15,13 @@ body {
    	color: #E31E19;
 }
 
-.sidenav {
-	background-color: #f1f1f1;
-	height: 100%;
-}
-
 footer {
 	position: relative;
     bottom: -20px;
     margin-bottom: -100px;
 }
 
-#my_centered_buttons { 
+#social_share_buttons { 
 	display: flex; 
 	justify-content: center; 
 }
@@ -35,15 +30,7 @@ footer {
 	padding-right: 20px;
 }
 
-.post-body-padding {
-	padding: 15px 0 15px 0;
-}
-
-.single-post-body-padding {
-	padding: 5px 0 15px 0;
-}
-
-.red, h1, h2, h3 {
+.red, h1, h2, h3, h4 {
 	color: #E31E19;
 }
 
@@ -58,51 +45,6 @@ p > iframe {
     background-color: grey;
 }
 
-@media screen and (min-width: 750px) {
-.carousel {
-	width: 100%;
-    height: 625px;
-    padding: 10px 70px;
-}
-}
-
-@media screen and (min-width: 750px) {
-.carousel-inner > .item > img {
-    margin: 0 auto;
-}
-}
-
-@media screen and (max-width: 750px) {
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-	width: 100%;
-	margin: auto;
-}
-}
-
-@media screen and (max-width: 750px) {
-img {
-	width: 100%;
-	margin: auto;
-}
-}
-
-.table, th, thead { border: 1px solid #000000; 
-	text-align: center;
-} 
-
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td { 
-	border: 1px solid #000000; 
-}
-
-.table tbody tr:hover td, .table tbody tr:hover th {
-    background-color: #E31E19;
-}
-
 .btn-h1-spacing {
 	margin-top: 15px;
 }
@@ -111,8 +53,8 @@ img {
 	margin-top: 25px;
 }
 
-.post-title-spacing {
-	margin: -4px 0px 20px 80px;
+#heading h5, h5, h4, h4 { 
+	display: inline; 
 }
 
 @media screen and (min-width: 750px) {
@@ -127,9 +69,96 @@ img {
 }
 }
 
-#heading h5, h5, h4, h4 { 
-	display: inline; 
-}
+// Blog Specific SCSS
+
+	.blog-index-sidebar {
+	height: 100%;
+	background-color: #E9E9E9;
+	margin-top: 25px;
+	border-radius: 25px;
+	}
+
+	.post-body-padding {
+		padding: 15px 0 15px 0;
+	}
+
+	.single-post-body-padding {
+		padding: 5px 0 15px 0;
+	}
+
+	.blog-title-image-spacing {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.blog-image-spacing {
+		padding-right: 10px;
+	}
+
+	@media screen and (max-width: 750px) {
+	.blog-image-spacing > img {
+		height: 200px; 
+		width: 350px;
+		width: 100%;
+	}
+	}
+
+	@media screen and (min-width: 750px) {
+	#post-title-spacing {
+		margin: -10px 0 -5px 0;
+	}
+	}
+
+
+// Photos Page SCSS
+
+	@media screen and (min-width: 750px) {
+	.carousel {
+		width: 100%;
+	    height: 625px;
+	    padding: 10px 70px;
+	}
+	}
+
+	@media screen and (min-width: 750px) {
+	.carousel-inner > .item > img {
+	    margin: 0 auto;
+	}
+	}
+
+	@media screen and (max-width: 750px) {
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+		width: 100%;
+		margin: auto;
+	}
+	}
+
+	@media screen and (max-width: 750px) {
+	img {
+		width: 100%;
+		margin: auto;
+	}
+	}
+
+
+// Tables
+
+	.table, th, thead { border: 1px solid #000000; 
+		text-align: center;
+	} 
+
+	.table-bordered > thead > tr > th,
+	.table-bordered > tbody > tr > th,
+	.table-bordered > tfoot > tr > th,
+	.table-bordered > thead > tr > td,
+	.table-bordered > tbody > tr > td,
+	.table-bordered > tfoot > tr > td { 
+		border: 1px solid #000000; 
+	}
+
+	.table tbody tr:hover td, .table tbody tr:hover th {
+	    background-color: #E31E19;
+	}
 
 
 //Comment System SCSS
