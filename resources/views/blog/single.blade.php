@@ -61,36 +61,32 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-2">
     <h3 class="comments-title"><span class="glyphicon glyphicon-comment"></span>
-      @if ($post->comments()->count() == 1)
-        {{ $post->comments()->count() }} Comment</h3>
-      @else
-        {{ $post->comments()->count() }} Comments</h3>
-      @endif
-      @foreach($post->comments as $comment)
-      <div class="comment">
-        <div class="author-info">
+      {{ $post->comments()->count() }} {{ $post->comments()->count() == 1 ? 'Comment':'Comments' }}
+    </h3>
 
-          <img class="author-image" src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?d=identicon" }}" >
-          <div class="author-name">
-            <h4>{{ $comment->name }}     
-              @if(Auth::check())         
-                @if (Auth::user()->email == $comment->email)
-                <a href="{{ route('comments.edit', $comment->id) }}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
-                <a href="{{ route('comments.delete', $comment->id) }}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
-                @endif 
-              @endif
-            </h4>
-            <p class="author-time">{{ date('F nS, Y - g:iA', strtotime($comment->created_at)) }}</p>
+      @foreach($post->comments as $comment)
+        <div class="comment">
+          <div class="author-info">
+            <img class="author-image" src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?d=identicon" }}" >
+            <div class="author-name">
+              <h4>{{ $comment->name }}     
+                @if(Auth::check())         
+                  @if (Auth::user()->email == $comment->email)
+                  <a href="{{ route('comments.edit', $comment->id) }}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
+                  <a href="{{ route('comments.delete', $comment->id) }}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
+                  @endif 
+                @endif
+              </h4>
+              <p class="author-time">{{ date('F nS, Y - g:iA', strtotime($comment->created_at)) }}</p>
+            </div>
+          </div>
+
+          <div class="comment-content text-justify">
+            {!! $comment->comment !!}
           </div>
 
         </div>
-
-        <div class="comment-content text-justify">
-          {!! $comment->comment !!}
-        </div>
-
-      </div>
-    @endforeach
+      @endforeach
   </div>
 </div>
 

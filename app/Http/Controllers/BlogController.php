@@ -10,7 +10,7 @@ use App\Tag;
 
 class BlogController extends Controller
 {
-    public function getIndex() {
+    public function index() {
 
         $posts = Post::orderBy('created_at', 'desc')->paginate(5);
         $categories = Category::all();
@@ -19,10 +19,33 @@ class BlogController extends Controller
         return view('blog.index')->with('posts', $posts)->with('categories', $categories)->with('tags', $tags);
     } 
 
-    public function getSingle($slug) {
+    public function single($slug) {
 
     	$post = Post::where('slug', '=', $slug)->first();
 
     	return view('blog.single')->with('post', $post);
+    }
+
+    public function category($id) {
+
+        $category = Category::find($id);
+
+        return view('blog.category')->with('category', $category);
+    }
+
+    public function tag($id) {
+
+        $tag = Tag::find($id);
+
+        return view('blog.tag')->with('tag', $tag);
+    }
+
+    public function search() {
+
+        $search = \Request::get('keyword'); //<-- we use global request to get the param of URI
+ 
+        $posts = Post::where('body','like','%'.$search.'%')->orderBy('title')->paginate(20);
+     
+        return view('blog.search', compact('posts'))->with('search', $search);
     }
 }

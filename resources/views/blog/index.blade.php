@@ -33,37 +33,47 @@
     </div>
       
     <div class="col-md-3 blog-index-sidebar">
+        <div class="blog-index-sidebar-contact">
+            <dl>
+                <dt class="red"><span class="glyphicon glyphicon-earphone"></span> Call or Text Me:</dt>
+                    <ul>
+                        <li><dd><span>Cell: <a href="tel:1-646-717-3142">(646) 717-3142</a></span></dd></li>
+                        <li><dd><span>Gym: <a href="tel:1-973-887-2496">(973) 887-2496</a></span></dd></li>
+                    </ul>
+            </dl>
+            <dl>
+                <dt class="red"><span class="glyphicon glyphicon-globe"></span> My Social Media:</dt>
+                    <ul>
+                        <li><dd><a href="https://www.facebook.com/Evolution-Performance-Systems-131558953564049/?fref=ts"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></dd></li>
+                    <li><dd><a href="https://www.instagram.com/eps_training"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></dd></li>
+                    </ul>
+            </dl> 
+        </div>  
       
-        {!! Form::open(['method'=>'GET','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
-            <div class="input-group custom-search-form">
-                <input type="text" class="form-control" name="search" placeholder="Search...">
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary btn-sm" type="submit">
-                    <i class="fa fa-search"></i>
-                    </button>
-                  </span>
+        {!! Form::open(['method'=>'GET', 'route'=>'blog.search', 'role'=>'keyword', 'class'=>'navbar-form navbar-left'])  !!}
+            <div class="form-group">
+                {{ Form::text('keyword', null, array('class'=>'form-control search-input-padding', 'placeholder'=>'Search Posts...')) }}
+
+                {{Form::button('<i class="fa fa-search"></i>', ['type' => 'submit', 'class' => 'btn btn-primary btn-sm form-control search-button-padding'])}}
             </div>
         {!! Form::close() !!}
 
-        <h3><u>Blog Posts</u></h3>
-          @foreach ($posts as $post)
-            <span><a>{{ $post->title }}</a></span>
-          @endforeach 
+        <div class="blog-index-sidebar-content">
+          <h4><u>Blog Posts</u></h4><br>
+            @foreach ($posts as $post)
+              <span><a href="{{ route('blog.single', $post->slug) }}">{{ $post->title }} </a></span>
+            @endforeach <br><br>
 
-        <h3><u>Categories</u></h3>
-          @foreach ($categories as $category)
-            <span><a>{{ $category->name }}</a></span>
-          @endforeach 
+          <h4><u>Categories</u></h4><br>
+            @foreach ($categories as $category)
+              <span><a href="{{ route('blog.category', $category->id) }}">{{ $category->name }} </a></span>
+            @endforeach <br><br>
 
-        <h3><u>Tags</u></h3>
-          @foreach ($tags as $tag)
-            <span><a>{{ $tag->name }}</a></span>
-          @endforeach    
-
-
-          <p>
-          Et pariatur autem tempore in et illum temporibus. Similique repudiandae dignissimos molestiae animi et. Laborum earum non et ullam est. Esse laboriosam facere et aliquam possimus. Officiis ut et aut accusantium qui. Recusandae quod reiciendis quis quidem sequi qui autem. Maiores unde odio reprehenderit. Fugit quibusdam et eum. Et dolorum consequuntur et autem est dolores adipisci. Ex et vitae sunt nisi accusantium dolores vero sit. Eligendi est vel occaecati quo id. Omnis praesentium itaque eaque sed voluptas fugit placeat voluptate. Similique magni est dolorem. Sint eum dolorem ea animi. Mollitia et vel qui. Necessitatibus neque labore dicta voluptatem dolores. Maxime hic eum ipsum nulla. Laborum ducimus et dolore. Aliquam aut fuga aut earum occaecati delectus. Blanditiis voluptatem provident qui sapiente repellendus impedit.  
-          </p>            
+          <h4><u>Tags</u></h4><br>
+            @foreach ($tags as $tag)
+              <span><a href="{{ route('blog.tag', $tag->id) }}">{{ $tag->name }} </a></span>
+            @endforeach <br><br>   
+        </div>
     </div>
 
   </div>

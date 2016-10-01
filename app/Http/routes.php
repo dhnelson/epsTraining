@@ -82,19 +82,34 @@ Route::get('facility', [
 ]);
 
 Route::get('blog', [
-	'as' => 'blog', 
-	'uses' => 'BlogController@getIndex'
+	'as' => 'blog.index', 
+	'uses' => 'BlogController@index'
 ]);
 
 Route::get('blog/{slug}', [
 	'as' => 'blog.single', 
-	'uses' => 'BlogController@getSingle'
+	'uses' => 'BlogController@single'
 ])->where('slug', '[\w\d\-\_]+');
+
+Route::get('blog/tag/{id}', [
+	'as' => 'blog.tag', 
+	'uses' => 'BlogController@tag'
+]);
+
+Route::get('blog/category/{id}', [
+	'as' => 'blog.category', 
+	'uses' => 'BlogController@category'
+]);
+
+Route::get('search', [
+	'as' => 'blog.search', 
+	'uses' => 'BlogController@search'
+]);
 
 Route::get('comments/{id}/delete', [
 	'as' => 'comments.delete', 
 	'uses' => 'CommentController@delete'
-	]);
+]);
 
 /*
 |**************

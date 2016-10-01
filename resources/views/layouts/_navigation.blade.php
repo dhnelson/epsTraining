@@ -28,7 +28,7 @@
                     <li class="{{ Request::is('testimonials') ? "active" : ""}}"><a href="{{ route('testimonials') }}">Testimonials</a></li>
                     <li class="{{ Request::is('contact') ? "active" : ""}}"><a href="{{ route('contact') }}">Contact</a></li>
                     </li>
-                    <li class="{{ Request::is('blog') ? "active" : ""}}"><a href="{{ route('blog') }}">Blog</a></li>
+                    <li class="{{ Request::is('blog') ? "active" : ""}}"><a href="{{ route('blog.index') }}">Blog</a></li>
                 </ul>
                 
                 <!-- Right Side Of Navbar -->

@@ -72,10 +72,17 @@ p > iframe {
 // Blog Specific SCSS
 
 	.blog-index-sidebar {
-	height: 100%;
-	background-color: #E9E9E9;
-	margin-top: 25px;
-	border-radius: 25px;
+		height: 100%;
+		background-color: #E9E9E9;
+		margin-top: 25px;
+		padding: 0 10px 0 10px;
+		border-radius: 25px;
+	}
+
+	@media screen and (min-width: 750px) {
+	.blog-index-sidebar-content {
+		padding: 50px 14px 25px 14px;
+	}
 	}
 
 	.post-body-padding {
@@ -109,6 +116,20 @@ p > iframe {
 	}
 	}
 
+	.blog-index-sidebar-contact {
+		padding: 25px 14px 0px 14px;
+	}
+
+	.search-input-padding {
+		padding: 6px 5px 6px 5px;
+		margin-bottom: 20px;
+	}
+
+	@media screen and (min-width: 750px) {
+	.search-button-padding {
+		margin-bottom: 20px;
+	}
+	}
 
 // Photos Page SCSS
 
@@ -204,4 +225,8 @@ p > iframe {
 
 	.comments-title>span {
 		margin-right: 15px;
+	}
+
+	.glyphicon-comment {
+		margin-right: 5px !important;
 	}
