@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Post;
 use App\Category;
 use App\Tag;
+use Purifier;
 
 class BlogController extends Controller
 {
@@ -42,7 +43,7 @@ class BlogController extends Controller
 
     public function search() {
 
-        $search = \Request::get('keyword'); //<-- we use global request to get the param of URI
+        Purifier::clean($search = \Request::get('keyword')); 
  
         $posts = Post::where('body','like','%'.$search.'%')->orderBy('title')->paginate(20);
      

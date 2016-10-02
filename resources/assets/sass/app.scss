@@ -45,6 +45,14 @@ p > iframe {
     background-color: grey;
 }
 
+.login-register-spacing {
+	margin-top: 20px;
+}
+
+.login-register-or-spacing {
+	margin: 0px 0 10px 0;
+}
+
 .btn-h1-spacing {
 	margin-top: 15px;
 }
@@ -70,20 +78,6 @@ p > iframe {
 }
 
 // Blog Specific SCSS
-
-	.blog-index-sidebar {
-		height: 100%;
-		background-color: #E9E9E9;
-		margin-top: 25px;
-		padding: 0 10px 0 10px;
-		border-radius: 25px;
-	}
-
-	@media screen and (min-width: 750px) {
-	.blog-index-sidebar-content {
-		padding: 50px 14px 25px 14px;
-	}
-	}
 
 	.post-body-padding {
 		padding: 15px 0 15px 0;
@@ -116,20 +110,73 @@ p > iframe {
 	}
 	}
 
+	.blog-index-sidebar {
+		height: 100%;
+		background-color: #E9E9E9;
+		margin-top: 25px;
+		padding: 0 10px 0 25px;
+		border-radius: 25px;
+	}
+
+	@media screen and (min-width: 750px) {
+	.blog-index-sidebar-content {
+		padding: 50px 14px 25px 14px;
+	}
+	}
+
 	.blog-index-sidebar-contact {
 		padding: 25px 14px 0px 14px;
 	}
 
-	.search-input-padding {
-		padding: 6px 5px 6px 5px;
-		margin-bottom: 20px;
-	}
+		// Search Button SCSS
 
-	@media screen and (min-width: 750px) {
-	.search-button-padding {
-		margin-bottom: 20px;
-	}
-	}
+			.search-input-padding {
+				padding-top: 0;
+				margin-top: 0;
+				margin-bottom: 15px;
+			@media screen and (min-width: 750px) {
+				margin-bottom: 25px;
+			}
+			}
+
+			#custom-search-input {
+		        margin:0;
+		        margin-top: 10px;
+		        padding: 0;
+		    }
+		 
+		    #custom-search-input .search-query {
+		        padding-right: 15px;
+		        padding-right: 4px \9;
+		        padding-left: 10px;
+		        padding-left: 4px \9;
+		        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+		 
+		        margin-bottom: 0;
+		        -webkit-border-radius: 3px;
+		        -moz-border-radius: 3px;
+		        border-radius: 3px;
+		    }
+		 
+		    #custom-search-input button {
+		        border: 0;
+		        background: none;
+		        /** belows styles are working good */
+		        padding: 2px 5px;
+		        margin-top: 2px;
+		        position: relative;
+		        left: -28px;
+		        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+		        margin-bottom: 0;
+		        -webkit-border-radius: 3px;
+		        -moz-border-radius: 3px;
+		        border-radius: 3px;
+		        color:#D9230F;
+		    }
+		 
+		    .search-query:focus + button {
+		        z-index: 3;   
+		    }
 
 // Photos Page SCSS
 

@@ -50,13 +50,19 @@
             </dl> 
         </div>  
       
-        {!! Form::open(['method'=>'GET', 'route'=>'blog.search', 'role'=>'keyword', 'class'=>'navbar-form navbar-left'])  !!}
-            <div class="form-group">
-                {{ Form::text('keyword', null, array('class'=>'form-control search-input-padding', 'placeholder'=>'Search Posts...')) }}
-
-                {{Form::button('<i class="fa fa-search"></i>', ['type' => 'submit', 'class' => 'btn btn-primary btn-sm form-control search-button-padding'])}}
+        {!! Form::open(['method'=>'GET', 'route'=>'blog.search', 'role'=>'keyword', 'class'=>'navbar-form navbar-left search-input-padding', 'data-parsley-validate' => ''])  !!}
+            <div id="custom-search-input">
+            <div class="input-group">
+                {{ Form::text('keyword', null, ['required'=>'', 'class'=>'form-control search-query', 'placeholder'=>'Search Posts...']) }}
+                <span class="input-group-btn">
+                  <button class="btn btn-danger" type="button">
+                      <span class=" glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+            </div>
             </div>
         {!! Form::close() !!}
+
 
         <div class="blog-index-sidebar-content">
           <h4><u>Blog Posts</u></h4><br>
