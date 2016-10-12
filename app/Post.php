@@ -19,7 +19,7 @@ class Post extends Model
 
     public function category() 
     {
-    	return $this->belongsTo('App\category');
+    	return $this->belongsTo('App\Category');
     }
 
     public function tags() 
@@ -27,8 +27,23 @@ class Post extends Model
         return $this->BelongsToMany('App\Tag');
     }
 
+    /**
+     * A post can have many comments.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function comments()
     {
         return $this->hasMany('App\Comment');
+    }
+
+    /**
+     * Load a threaded set of comments for the post.
+     *
+     * @return App\CommentsCollection
+     */
+    public function getThreadedComments()
+    {
+        return $this->comments()->get()->threaded();
     }
 }

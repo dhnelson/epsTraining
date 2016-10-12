@@ -9,7 +9,6 @@
 
 <div class="row">
 	{!!  Form::model($post, ['route' => ['posts.update', $post->id], 'data-parsley-validate' => '', 'method' => 'PATCH', 'files' => true]) !!}
-	{{ csrf_field() }}
     <div class="col-md-6 col-md-offset-1">
         
         <div class="form-group">
@@ -58,7 +57,7 @@
         </dl>
 
     		<dl class"dl-horizontal">
-    			<dt>Created At:</dt>
+    			<dt>Created On:</dt>
     			<dd>{{ date('M j, Y h:ia', strtotime($post->created_at)) }}</dd>
     		</dl>
 

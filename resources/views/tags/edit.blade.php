@@ -8,7 +8,6 @@
 <hr>
 <div class="row">
 {!!  Form::model($tag, ['route' => ['tags.update', $tag->id], 'data-parsley-validate' => '', 'method' => 'PATCH']) !!}
-{{ csrf_field() }}
   <div class="col-md-6 col-md-offset-3">
     <div class="form-group">
         {{ Form::label('name', "Edit Tag Name:") }}

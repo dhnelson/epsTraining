@@ -56,9 +56,9 @@ Route::get('team', [
 	'uses' => 'PagesController@team'
 ]);
 
-Route::get('photos', [
-	'as' => 'photos', 
-	'uses' => 'PagesController@photos'
+Route::get('pics', [
+	'as' => 'pics', 
+	'uses' => 'PagesController@pics'
 ]);
 
 Route::get('testimonials', [

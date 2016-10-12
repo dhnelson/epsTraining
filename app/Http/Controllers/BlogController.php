@@ -8,6 +8,7 @@ use App\Post;
 use App\Category;
 use App\Tag;
 use Purifier;
+use Illuminate\Support\Collection;
 
 class BlogController extends Controller
 {
@@ -24,7 +25,7 @@ class BlogController extends Controller
 
     	$post = Post::where('slug', '=', $slug)->first();
 
-    	return view('blog.single')->with('post', $post);
+    	return view('blog.single')->with('post', $post)->with('comments', $post->getThreadedComments());
     }
 
     public function category($id) {

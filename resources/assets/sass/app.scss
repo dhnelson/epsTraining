@@ -6,76 +6,101 @@ body {
 	margin-bottom:100px;
 }
 
-.navbar {
-	background-color: black;
-	padding-bottom: 40px
-}
-
-.navbar-inverse, .nav.navbar-nav li a {
-   	color: #E31E19;
-}
-
-footer {
-	position: relative;
-    bottom: -20px;
-    margin-bottom: -100px;
-}
-
-#social_share_buttons { 
-	display: flex; 
-	justify-content: center; 
-}
-
-.copyright-padding {
-	padding-right: 20px;
-}
-
 .red, h1, h2, h3, h4 {
 	color: #E31E19;
-}
-
-p > iframe {
-  width: 100%    !important;
-  height: 450px   !important;
-}
-
-#map {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-}
-
-.login-register-spacing {
-	margin-top: 20px;
-}
-
-.login-register-or-spacing {
-	margin: 0px 0 10px 0;
-}
-
-.btn-h1-spacing {
-	margin-top: 15px;
-}
-
-.form-spacing-top, .edit-box-spacing  {
-	margin-top: 25px;
 }
 
 #heading h5, h5, h4, h4 { 
 	display: inline; 
 }
 
-@media screen and (min-width: 750px) {
-.contact-box-spacing {
-	margin-top: 80px;
-}
-}
+// Navigation Bar and Footer
 
-@media screen and (min-width: 750px) {
-.location-box-spacing {
-	margin-top: 50px;
-}
-}
+	.navbar {
+		background-color: black;
+		@media screen and (max-width: 770px) {
+			padding-bottom: 40px;
+	}
+	}
+
+	.navbar-inverse, .nav.navbar-nav li a {
+	   	color: #E31E19;
+	   	@media screen and (min-width: 770px) {
+	   	line-height: 70px;
+	}
+	}
+
+	.navbar-brand {
+		margin-right: 15px;
+	}
+
+	@media screen and (max-width: 750px) {
+	#myNavbar {
+		margin-top: 45px;
+	}
+	}
+
+	#myDropdown {
+		line-height: 20px;
+	}
+
+	footer {
+		position: relative;
+	    bottom: -20px;
+	    margin-bottom: -100px;
+	}
+
+	.footer-copyright-padding {
+	padding-right: 20px;
+	}
+
+// API's and Embeds
+
+	#social_share_buttons { 
+		display: flex; 
+		justify-content: center; 
+	}
+
+	#map {
+	    width: 100%;
+	    height: 400px;
+	    background-color: grey;
+	}
+
+	p > iframe {
+	  width: 100%    !important;
+	  height: 450px   !important;
+	}
+
+// Spacing
+
+	.login-register-spacing {
+		margin-top: 20px;
+	}
+
+	.login-register-or-spacing {
+		margin: 0px 0 10px 0;
+	}
+
+	.btn-h1-spacing {
+		margin-top: 15px;
+	}
+
+	.form-spacing-top, .edit-box-spacing  {
+		margin-top: 25px;
+	}
+
+	@media screen and (min-width: 750px) {
+	.contact-box-spacing {
+		margin-top: 80px;
+	}
+	}
+
+	@media screen and (min-width: 750px) {
+	.location-box-spacing {
+		margin-top: 50px;
+	}
+	}
 
 // Blog Specific SCSS
 
@@ -125,7 +150,7 @@ p > iframe {
 	}
 
 	.blog-index-sidebar-contact {
-		padding: 25px 14px 0px 14px;
+		padding: 25px 14px 0px 12px;
 	}
 
 		// Search Button SCSS
@@ -178,6 +203,64 @@ p > iframe {
 		        z-index: 3;   
 		    }
 
+		//Comment System SCSS
+
+			.comment {
+				margin-bottom: 45px;
+			}
+
+			#comment-children {
+				margin-top: 25px;
+			}
+
+			#comment-form {
+				margin-top: -20;
+			}
+
+			.author-image {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				float: left;
+			}
+
+			.author-name {
+				float: left;
+				margin-left: 15px; 
+			}
+
+			.author-name>h4 {
+				margin: 5px 0px;
+				
+			}
+
+			.author-time {
+				font-size: 12px;
+				font-style: italic;
+				color: #aaa;
+			}
+
+			.comment-content {
+				clear: both;
+				margin-left: 65px;
+				margin-botom: 25px;
+				font-size: 16px;
+				line-height: 1.3em;
+			}
+
+			.comments-title {
+				margin-bottom:45px;
+				margin-top: 10px;
+			}
+
+			.comments-title>span {
+				margin-right: 15px;
+			}
+
+			.glyphicon-comment {
+				margin-right: 5px !important;
+			}
+
 // Photos Page SCSS
 
 	@media screen and (min-width: 750px) {
@@ -226,54 +309,4 @@ p > iframe {
 
 	.table tbody tr:hover td, .table tbody tr:hover th {
 	    background-color: #E31E19;
-	}
-
-
-//Comment System SCSS
-
-	.comment {
-		margin-bottom: 45px;
-	}
-
-	.author-image {
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		float: left;
-	}
-
-	.author-name {
-		float: left;
-		margin-left: 15px; 
-	}
-
-	.author-name>h4 {
-		margin: 5px 0px;
-		
-	}
-
-	.author-time {
-		font-size: 12px;
-		font-style: italic;
-		color: #aaa;
-	}
-
-	.comment-content {
-		clear: both;
-		margin-left: 65px;
-		font-size: 16px;
-		line-height: 1.3em;
-	}
-
-	.comments-title {
-		margin-bottom:45px;
-		margin-top: 10px;
-	}
-
-	.comments-title>span {
-		margin-right: 15px;
-	}
-
-	.glyphicon-comment {
-		margin-right: 5px !important;
 	}

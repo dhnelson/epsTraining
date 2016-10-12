@@ -11,7 +11,6 @@
   	<h2 class="text-center">Create A New Blog Post!</h2>
   	 <hr>
       {!! Form::open (array('action' => 'PostController@store', 'data-parsley-validate' => '', 'files' => true)) !!} 
-      {{ csrf_field() }}
 
           <div class="form-group">
               {{ Form::label('Author:') }}

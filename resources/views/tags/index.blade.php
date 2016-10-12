@@ -36,7 +36,6 @@
   <div class="col-md-3 form-spacing-top">
   	<div class="well">
   		{!! Form::open (array('action' => 'TagController@store', 'data-parsley-validate' => '',)) !!} 
-      {{ csrf_field() }}
 
       	<div class="form-group">
           {{ Form::label('Name:') }}

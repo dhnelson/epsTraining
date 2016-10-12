@@ -16,12 +16,12 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="{{ Request::is('/') ? "active" : ""}}"><a href="{{ route('home') }}">Home</a></li> 
-                    <li class="dropdown {{ Request::is('king', 'team', 'facility', 'photos') ? "active" : ""}}"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About EPS <span class="caret"></span></a>
+                    <li class="dropdown {{ Request::is('king', 'team', 'facility', 'pics') ? "active" : ""}}"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About EPS <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a href="{{ route('king') }}">The King</a></li> 
-                          <li><a href="{{ route('team') }}">The Team</a></li>
-                          <li><a href="{{ route('facility') }}">Facility</a></li>
-                          <li><a href="{{ route('photos') }}">Photos</a></li>
+                          <li><a id="myDropdown" href="{{ route('king') }}">The King</a></li> 
+                          <li><a id="myDropdown" href="{{ route('team') }}">The Team</a></li>
+                          <li><a id="myDropdown" href="{{ route('facility') }}">Facility</a></li>
+                          <li><a id="myDropdown" href="{{ route('pics') }}">Pictures</a></li>
                         </ul>
                     </li>
                     <li class="{{ Request::is('services') ? "active" : ""}}"><a href="{{ route('services') }}">Services</a></li>

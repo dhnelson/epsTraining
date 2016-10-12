@@ -8,7 +8,6 @@
 <hr>
 <div class="row">
   {!!  Form::model($category, ['route' => ['categories.update', $category->id], 'data-parsley-validate' => '', 'method' => 'PATCH']) !!}
-  {{ csrf_field() }}
   <div class="col-md-6 col-md-offset-3">
       <div class="form-group">
           {{ Form::label('name', "Edit Category Name:") }}

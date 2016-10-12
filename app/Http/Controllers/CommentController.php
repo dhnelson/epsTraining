@@ -36,10 +36,10 @@ class CommentController extends Controller
 
         $comment = new Comment();
 
-        $comment->name     = Auth::user()->name;
-        $comment->email    = Auth::user()->email;
-        $comment->comment  = Purifier::clean($request->comment);
-        $comment->approved = true;
+        $comment->name      = Auth::user()->name;
+        $comment->email     = Auth::user()->email;
+        $comment->comment   = Purifier::clean($request->comment);
+        $comment->parent_id = $request->parent_id;
         $comment->post()->associate($post);
 
         $comment->save();

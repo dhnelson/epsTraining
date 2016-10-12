@@ -20,8 +20,8 @@ class PagesController extends Controller
         return view('pages.team');
     }
 
-    public function photos() {
-        return view('pages.photos');
+    public function pics() {
+        return view('pages.pics');
     }   
 
     public function testimonials() {

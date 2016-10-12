@@ -10,7 +10,6 @@
         <h2 class="text-center">Contact Me Today!</h2>
 
     {!! Form::open (array('action' => 'ContactController@ContactForm', 'data-parsley-validate' => '')) !!} 
-    {{ csrf_field() }}
     
             <div class="form-group red">
                 {{ Form::label('Name:') }}

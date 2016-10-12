@@ -38,7 +38,7 @@
 		</dl>
 
   		<dl class"dl-horizontal">
-  			<dt>Created At:</dt>
+  			<dt>Created On:</dt>
   			<dd>{{ date('M j, Y h:ia', strtotime($post->created_at)) }}</dd>
   		</dl>
 

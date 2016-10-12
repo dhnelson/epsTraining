@@ -9,7 +9,6 @@
 <hr>
 <div class="row">
 {!!  Form::model($comment, ['route' => ['comments.update', $comment->id], 'method' => 'PATCH']) !!}
-{{ csrf_field() }}
   <div class="col-md-6 col-md-offset-3">
   <h3>Edit Comment:</h3>
     <div class="form-group">

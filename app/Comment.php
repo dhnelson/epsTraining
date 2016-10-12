@@ -10,4 +10,15 @@ class Comment extends Model
     {
     	return $this->belongsTo('App\Post');
     }
+
+    /**
+     * Use a custom collection for all comments.
+     *
+     * @param  array  $models
+     * @return CustomCollection
+     */
+    public function newCollection(array $models = [])
+    {
+        return new CommentCollection($models);
+    }
 }

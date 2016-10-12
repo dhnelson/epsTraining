@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-sm-5 col-md-offset-1">
 
-    <h3><b>EPS Training</b> is run out of Whippany Athletic Club located at:</h3>
+    <h3><b>EPS Training Address:</b></h3>
 
         <div class="well">     
           <p><b class="red">Whippany Athletic Club</b><br>
@@ -16,15 +16,15 @@
 
           <p>Algonquin Parkway is conveniently located right off of route 10!</p>
 
-          <p>Here is a link to <a href="https://www.whippanyac.com">Whippany Athletic Club</a> so you can learn more about the gym.</p>
+          <p>EPS Training is run out of <a href="https://www.whippanyac.com">Whippany Athletic Club</a>. Click the link to learn more about the gym.</p>
         </div>
 
         <div class="well">
             <dl>
                 <dt class="red"><span class="glyphicon glyphicon-earphone"></span> Call or Text:</dt>
                     <ul>
-                        <li><dd><span>Whippany Athletic Club#: <a href="tel:1-973-887-2496">(973) 887-2496</a></span></dd></li>
-                       <li><dd><span>Cellphone#: <a href="tel:1-646-717-3142">(646) 717-3142</a></span></dd></li>
+                        <li><dd><span>Whippany Athletic Club: <a href="tel:1-973-887-2496">(973) 887-2496</a></span></dd></li>
+                       <li><dd><span>Cellphone: <a href="tel:1-646-717-3142">(646) 717-3142</a></span></dd></li>
                     </ul>
             </dl>
 
