@@ -22,9 +22,13 @@
       @include ('blog.form', ['parentId' => $comment->id])
   @endif
 
-  <ul id="comment-children">
-    @if (isset($comments[$comment->id]))
-        @include ('blog.list', ['collection' => $comments[$comment->id]])
-    @endif
-  </ul>
+  @if (isset($comments[$comment->id]))
+    <button type="button" class='Button pull-right'><small>Show More</small></button>
+      <div id="toggle" style="display: none;">
+        <ul id="comment-children">
+          @include ('blog.list', ['collection' => $comments[$comment->id]])
+        </ul>
+      </div>
+  @endif
+
 </div>

@@ -67,6 +67,7 @@
     
     @include ('blog.list', ['collection' => $comments['root']])
   
+  <br><hr>
   </div>
 </div>
 

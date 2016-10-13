@@ -4,9 +4,9 @@
         @include('layouts._head')
     </head>    
 
-<body>
+    @include('layouts._js')
 
-        @include('layouts._js')
+<body>
 
         @include('flash')
 
