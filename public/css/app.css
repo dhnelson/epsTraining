@@ -6,8 +6,14 @@ body {
 .red, h1, h2, h3, h4 {
   color: #E31E19; }
 
+.blue, a {
+  color: #0089de; }
+
 #heading h5, h5, h4, h4 {
   display: inline; }
+
+.glyphicon-pencil, .glyphicon-trash {
+  padding: 3px; }
 
 .navbar {
   background-color: black; }
@@ -101,59 +107,27 @@ p > iframe {
   height: 100%;
   background-color: #E9E9E9;
   margin-top: 25px;
-  padding: 0 10px 0 25px;
+  padding: 15px 10px 0 25px;
   border-radius: 25px; }
 
-@media screen and (min-width: 750px) {
-  .blog-index-sidebar-content {
-    padding: 50px 14px 25px 14px; } }
+.blog-index-sidebar-content {
+  padding: 15px 14px 0px 14px; }
 
 .blog-index-sidebar-contact {
-  padding: 25px 14px 0px 12px; }
+  padding: 15px 14px 0px 12px; }
 
-.search-input-padding {
-  padding-top: 0;
-  margin-top: 0;
-  margin-bottom: 15px; }
-  @media screen and (min-width: 750px) {
-    .search-input-padding {
-      margin-bottom: 25px; } }
+.subscribe-spacing {
+  padding: 0 54px 0 0; }
 
-#custom-search-input {
-  margin: 0;
-  margin-top: 10px;
-  padding: 0; }
-
-#custom-search-input .search-query {
-  padding-right: 15px;
-  padding-right: 4px \9;
-  padding-left: 10px;
-  padding-left: 4px \9;
-  /* IE7-8 doesn't have border-radius, so don't indent the padding */
-  margin-bottom: 0;
-  border-radius: 3px; }
-
-#custom-search-input button {
-  border: 0;
-  background: none;
-  /** belows styles are working good */
-  padding: 2px 5px;
-  margin-top: 2px;
-  position: relative;
-  left: -28px;
-  /* IE7-8 doesn't have border-radius, so don't indent the padding */
-  margin-bottom: 0;
-  border-radius: 3px;
-  color: #D9230F; }
-
-.search-query:focus + button {
-  z-index: 3; }
+.subscribe-btn {
+  display: block;
+  display: fixed; }
 
 .comment {
   margin-bottom: 20px; }
 
 #comment-children {
-  margin-top: 25px; }
+  margin-left: 22px; }
 
 #comment-form {
   margin-top: -20; }

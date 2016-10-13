@@ -7,8 +7,11 @@ use App\Http\Requests;
 use App\Post;
 use App\Category;
 use App\Tag;
+use App\Subscribe;
+use App\Http\Requests\SubscribeFormRequest;
 use Purifier;
 use Illuminate\Support\Collection;
+use Mail;
 
 class BlogController extends Controller
 {
@@ -49,5 +52,15 @@ class BlogController extends Controller
         $posts = Post::where('body','like','%'.$search.'%')->orderBy('title')->paginate(20);
      
         return view('blog.search', compact('posts'))->with('search', $search);
+    }
+
+    public function subscribe(SubscribeFormRequest $request) {
+
+        Subscribe::create($request->all());
+
+        flash()->success('Thanks!', 'You Are Now Subscribed');
+
+        return redirect()->route('blog.index');
+
     }
 }

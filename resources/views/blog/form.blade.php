@@ -8,7 +8,7 @@
 	<button type="button" class='Button'><small>Click to Reply</small></button>
 		<div id="toggle" style="display: none;">
 		    <div class="form-group">
-		        {{ Form::textarea('comment', null, ['class'=>'form-control', 'rows'=>'4', 'placeholder'=>'Reply to this comment']) }}
+		        {{ Form::textarea('comment', null, ['class'=>'form-control', 'rows'=>'3', 'placeholder'=>'Reply to this comment']) }}
 		    </div>
 
 		    <div class="form-group">

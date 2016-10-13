@@ -128,6 +128,10 @@ Route::post('comments/{post_id}', [
 	'uses' => 'CommentController@store'
 ]);
 
+Route::post('blog', [
+	'as' => 'subscribe',
+	'uses' => 'BlogController@subscribe'
+]);
 
 
 

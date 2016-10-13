@@ -40,4 +40,17 @@ class ContactController extends Controller
         return redirect()->route('home');
     }
 
+    public function subscriptionEmail() {
+
+        mail::send('contact.subscriptionEmail', $data, function($message) use ($data) {
+                $message->from($data['email']);
+                $message->to('dustinhnelson@gmail.com');
+                $message->subject($data['subject']);
+        });
+
+        flash()->success('Thanks!', 'Your Message Was Sent Successfully');
+
+        return redirect()->route('home');
+    }
+
 } 

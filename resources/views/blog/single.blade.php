@@ -35,13 +35,13 @@
 
 @if(Auth::check())      
   <div class="row">
-    <div class="col-md-6 form-group col-md-offset-2" id="comment-form">
+    <div class="col-md-8 form-group col-md-offset-2" id="comment-form">
       {{ Form::open(['route' => ['comments.store', $post->id], 'method' => 'POST']) }}
 
         <div class="form-group">
           <h2>
             {{ Form::label('comment', 'Comment:') }}
-            {{ Form::textarea('comment', null, ['class'=>'form-control', 'rows'=>'4', 'placeholder'=>'Let Me Know What You Think']) }}
+            {{ Form::textarea('comment', null, ['class'=>'form-control', 'rows'=>'3', 'placeholder'=>'Let Me Know What You Think']) }}
           </h2>
         </div>
 
@@ -53,14 +53,14 @@
   </div>
 @else
   <div class="row">
-    <div class="col-md-6 col-md-offset-2">
+    <div class="col-md-8 col-md-offset-2">
       <h3><a href="{{ url('/login') }}">Login</a> or <a href="{{ url('/register') }}">Register</a> to Leave a Comment</h3> 
     </div> 
   </div>
 @endif
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-2">
+  <div class="col-md-8 col-md-offset-2">
     <h3 class="comments-title"><span class="glyphicon glyphicon-comment"></span>
       {{ $post->comments()->count() }} {{ $post->comments()->count() == 1 ? 'Comment':'Comments' }}
     </h3>

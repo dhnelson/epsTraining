@@ -43,14 +43,14 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ route('comments.index') }}">Your Comments</a></li>
+                                <li><a id="myDropdown" href="{{ route('comments.index') }}">Your Comments</a></li>
                                 @if (auth()->user()->isAdmin())
-                                <li><a href="{{ route('posts.index') }}">Blog Posts</a></li>
-                                <li><a href="{{ route('categories.index') }}">Categories</a></li>
-                                <li><a href="{{ route('tags.index') }}">Tags</a></li>
+                                <li><a id="myDropdown" href="{{ route('posts.index') }}">Blog Posts</a></li>
+                                <li><a id="myDropdown" href="{{ route('categories.index') }}">Categories</a></li>
+                                <li><a id="myDropdown" href="{{ route('tags.index') }}">Tags</a></li>
                                 <li class="divider"></li>
                                 @endif
-                                <li><a href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                                <li><a id="myDropdown" href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                             </ul>
                         </li>
                     @endif

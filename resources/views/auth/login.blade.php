@@ -134,6 +134,10 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
+                                <div class="checkbox checked" style="padding: 0 0 10px 0;">
+                                    <label><input type="checkbox" value="" name="subscribe" checked="checked">Subscribe to Blog</label>
+                                </div>
+                                
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i> Register
                                 </button>
