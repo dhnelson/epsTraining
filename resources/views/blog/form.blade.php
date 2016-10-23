@@ -5,7 +5,7 @@
     @endif
 	
 <div class="reply-spacing">
-	<button type="button" class='Button'><small>Click to Reply</small></button>
+	<a class='Button'><small>Reply &#8597;</small></a>
 		<div id="toggle" style="display: none;">
 		    <div class="form-group">
 		        {{ Form::textarea('comment', null, ['class'=>'form-control', 'rows'=>'3', 'placeholder'=>'Reply to this comment']) }}
@@ -16,6 +16,7 @@
 		    </div>
 		</div>
 </div>
+
 {!! Form::close() !!}
 
 

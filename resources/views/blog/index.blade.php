@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
     <div class="col-md-9">
-      <h1>Welcome to My Blog!</h1>
+      <h1 class="blue">Welcome to My Blog!</h1>
         @foreach ($posts as $post)
         <hr>
           @if (isset($post->image)) 

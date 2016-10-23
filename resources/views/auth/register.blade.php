@@ -71,9 +71,9 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox checked" style="padding: 0 0 10px 0;">
+                                {{-- <div class="checkbox checked" style="padding: 0 0 10px 0;">
                                     <label><input type="checkbox" value="" name="subscribe" checked="checked">Subscribe to Blog</label>
-                                </div>
+                                </div> --}}
 
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i> Register
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <h1 class="text-center login-register-or-spacing">Or</h1>
+    <h1 class="text-center login-register-or-spacing">- Or -</h1>
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

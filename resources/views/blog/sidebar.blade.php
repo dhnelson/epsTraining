@@ -1,11 +1,11 @@
 <div class="col-md-3 blog-index-sidebar">
-    {!! Form::open (['action' => 'BlogController@subscribe', 'class'=>'navbar-form subscribe-spacing', 'data-parsley-validate' => '', 'data-parsley-errors-container'=>'#subscribe-errors']) !!}  
+    {!! Form::open (['action' => 'MailChimpController@subscribe', 'class'=>'navbar-form subscribe-spacing', 'data-parsley-validate' => '', 'data-parsley-errors-container'=>'#subscribe-errors']) !!}  
         <div class="input-group blue">
           {{ Form::label('Subscribe:') }}
           {{ Form::text('email', null, ['required'=>'', 'class'=>'form-control', 'placeholder'=>'Enter Email...']) }}
             <span class="input-group-btn subscribe-btn">
               <button class="btn btn-danger" type="submit">
-                  <span class=" glyphicon glyphicon-search"></span>
+                  <span class="fa fa-envelope-o" aria-hidden="true"></span>
               </button>
             </span>
         </div>
@@ -42,18 +42,18 @@
       <div id="search-errors"></div>
     {!! Form::close() !!}
 
-    <div class="blog-index-sidebar-content">
-      <h4><u>Blog Posts</u></h4><br>
+    <div class="blog-index-sidebar-content red">
+      <h5><b><u>Blog Posts:</u></b></h5><br>
         @foreach ($posts as $post)
           <span><a href="{{ route('blog.single', $post->slug) }}">{{ $post->title }} </a></span>
         @endforeach <br><br>
 
-      <h4><u>Categories</u></h4><br>
+      <h5><b><u>Categories:</u></b></h5><br>
         @foreach ($categories as $category)
           <span><a href="{{ route('blog.category', $category->id) }}">{{ $category->name }} </a></span>
         @endforeach <br><br>
 
-      <h4><u>Tags</u></h4><br>
+      <h5><b><u>Tags:</u></b></h5><br>
         @foreach ($tags as $tag)
           <span><a href="{{ route('blog.tag', $tag->id) }}">{{ $tag->name }} </a></span>
         @endforeach <br><br>   

@@ -10,7 +10,7 @@ body {
 	color: #E31E19;
 }
 
-.blue, a {
+.blue {
 	color: #0089de;
 }
 
@@ -20,6 +20,12 @@ body {
 
 .glyphicon-pencil, .glyphicon-trash {
 	padding: 3px;
+}
+
+a {
+    color: #0089de;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 // Navigation Bar and Footer
@@ -91,7 +97,11 @@ body {
 	}
 
 	.btn-h1-spacing {
-		margin-top: 15px;
+		margin-top: 15px; 
+	}
+
+	.email-subscribers-btn {
+		margin-left: 5px;
 	}
 
 	.form-spacing-top, .edit-box-spacing  {
@@ -155,12 +165,12 @@ body {
 
 
 		.blog-index-sidebar-content {
-			padding: 15px 14px 0px 14px;
+			padding: 15px 0px 0px 2px;
 		}
 		
 
 		.blog-index-sidebar-contact {
-			padding: 15px 14px 0px 12px;
+			padding: 15px 0px 0px 2px;
 		}
 
 	    .subscribe-spacing {
@@ -176,10 +186,14 @@ body {
 
 			.comment {
 				margin-bottom: 20px;
+				background-color: #E9E9E9;
+				padding: 10px 10px 0px 10px;
+				border-radius: 10px;
 			}
 
 			#comment-children {
 				margin-left: 22px;
+
 			}
 
 			#comment-form {
@@ -231,6 +245,10 @@ body {
 			}
 
 			.reply-spacing {
+				margin-left: 65px;
+			}
+
+			.comments-button {
 				margin-left: 65px;
 			}
 

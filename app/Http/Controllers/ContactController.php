@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Requests\ContactFormRequest;
 use App\Contact;
 use Mail;
+use Purifier;
 
 
 class ContactController extends Controller
@@ -16,8 +17,8 @@ class ContactController extends Controller
 	public function contact() {
 
     	return view('contact.contact');
-
 }
+
     public function ContactForm(ContactFormRequest $request){
 
         Contact::create($request->all());
@@ -29,23 +30,10 @@ class ContactController extends Controller
         	'bodyMessage' => $request->message
         ];
 
-        mail::send('contact.emails', $data, function($message) use ($data) {
+        mail::send('contact.contactEmail', $data, function($message) use ($data) {
         		$message->from($data['email']);
         		$message->to('dustinhnelson@gmail.com');
         		$message->subject($data['subject']);
-        });
-
-        flash()->success('Thanks!', 'Your Message Was Sent Successfully');
-
-        return redirect()->route('home');
-    }
-
-    public function subscriptionEmail() {
-
-        mail::send('contact.subscriptionEmail', $data, function($message) use ($data) {
-                $message->from($data['email']);
-                $message->to('dustinhnelson@gmail.com');
-                $message->subject($data['subject']);
         });
 
         flash()->success('Thanks!', 'Your Message Was Sent Successfully');

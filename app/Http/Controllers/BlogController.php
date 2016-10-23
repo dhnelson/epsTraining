@@ -21,14 +21,14 @@ class BlogController extends Controller
         $categories = Category::all();
         $tags = Tag::all();
 
-        return view('blog.index')->with('posts', $posts)->with('categories', $categories)->with('tags', $tags);
+        return view('blog.index')->with(['posts'=>$posts, 'categories'=>$categories, 'tags'=>$tags]);
     } 
 
     public function single($slug) {
 
     	$post = Post::where('slug', '=', $slug)->first();
 
-    	return view('blog.single')->with('post', $post)->with('comments', $post->getThreadedComments());
+    	return view('blog.single')->with(['post'=>$post, 'comments'=>$post->getThreadedComments()]);
     }
 
     public function category($id) {
@@ -52,15 +52,5 @@ class BlogController extends Controller
         $posts = Post::where('body','like','%'.$search.'%')->orderBy('title')->paginate(20);
      
         return view('blog.search', compact('posts'))->with('search', $search);
-    }
-
-    public function subscribe(SubscribeFormRequest $request) {
-
-        Subscribe::create($request->all());
-
-        flash()->success('Thanks!', 'You Are Now Subscribed');
-
-        return redirect()->route('blog.index');
-
     }
 }

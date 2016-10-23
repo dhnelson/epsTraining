@@ -5,8 +5,12 @@
 @section('content') 
 
 <div class="row">
-  <div class="col-sm-12">
-  	<h1>All Posts<a href="{{ route('posts.create') }}" class="btn btn-primary btn-lg pull-right">Creat New Post</a></h1>
+  <div class="col-sm-6">
+  	<h1>All Posts</h1>
+  </div>
+  <div class="col-sm-6">
+  	<a href="{{ route('contact.emailSubscribers') }}" class="btn btn-success btn-lg pull-right email-subscribers-btn">Email Subscribers</a> 
+  	<a href="{{ route('posts.create') }}" class="btn btn-primary btn-lg pull-right">Creat New Post</a>
   </div>
 </div>
 <br>

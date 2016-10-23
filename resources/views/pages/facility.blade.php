@@ -10,7 +10,7 @@
     <h3><b>EPS Training Address:</b></h3>
 
         <div class="well">     
-          <p><b class="red">Whippany Athletic Club</b><br>
+          <p><a href="https://www.whippanyac.com"><b>Whippany Athletic Club</b></a><br>
              156 Algonquin Parkway <br>
              Whippany, NJ &nbsp;07981</p>
 
@@ -21,7 +21,7 @@
 
         <div class="well">
             <dl>
-                <dt class="red"><span class="glyphicon glyphicon-earphone"></span> Call or Text:</dt>
+                <dt class="red"><span class="blue glyphicon glyphicon-earphone"></span> Call or Text:</dt>
                     <ul>
                         <li><dd><span>Whippany Athletic Club: <a href="tel:1-973-887-2496">(973) 887-2496</a></span></dd></li>
                        <li><dd><span>Cellphone: <a href="tel:1-646-717-3142">(646) 717-3142</a></span></dd></li>
@@ -29,7 +29,7 @@
             </dl>
 
             <dl>
-                <dt class="red"><span class="glyphicon glyphicon-globe"></span> Social Media:</dt>
+                <dt class="red"><span class="blue glyphicon glyphicon-globe"></span> Social Media:</dt>
                     <ul>
                         <li><dd><a href="https://www.facebook.com/Evolution-Performance-Systems-131558953564049/?fref=ts"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></dd></li>
                     <li><dd><a href="https://www.instagram.com/eps_training"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></dd></li>

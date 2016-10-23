@@ -65,9 +65,10 @@
       {{ $post->comments()->count() }} {{ $post->comments()->count() == 1 ? 'Comment':'Comments' }}
     </h3>
     
-    @include ('blog.list', ['collection' => $comments['root']])
+    @if ($post->comments()->count() !== 0)
+      @include ('blog.list', ['collection' => $comments['root']])
+    @endif
   
-  <br><hr>
   </div>
 </div>
 

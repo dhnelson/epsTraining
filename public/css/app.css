@@ -6,7 +6,7 @@ body {
 .red, h1, h2, h3, h4 {
   color: #E31E19; }
 
-.blue, a {
+.blue {
   color: #0089de; }
 
 #heading h5, h5, h4, h4 {
@@ -14,6 +14,11 @@ body {
 
 .glyphicon-pencil, .glyphicon-trash {
   padding: 3px; }
+
+a {
+  color: #0089de;
+  cursor: pointer;
+  text-decoration: none; }
 
 .navbar {
   background-color: black; }
@@ -69,6 +74,9 @@ p > iframe {
 .btn-h1-spacing {
   margin-top: 15px; }
 
+.email-subscribers-btn {
+  margin-left: 5px; }
+
 .form-spacing-top, .edit-box-spacing {
   margin-top: 25px; }
 
@@ -111,10 +119,10 @@ p > iframe {
   border-radius: 25px; }
 
 .blog-index-sidebar-content {
-  padding: 15px 14px 0px 14px; }
+  padding: 15px 0px 0px 2px; }
 
 .blog-index-sidebar-contact {
-  padding: 15px 14px 0px 12px; }
+  padding: 15px 0px 0px 2px; }
 
 .subscribe-spacing {
   padding: 0 54px 0 0; }
@@ -124,7 +132,10 @@ p > iframe {
   display: fixed; }
 
 .comment {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  background-color: #E9E9E9;
+  padding: 10px 10px 0px 10px;
+  border-radius: 10px; }
 
 #comment-children {
   margin-left: 22px; }
@@ -168,6 +179,9 @@ p > iframe {
   margin-right: 5px !important; }
 
 .reply-spacing {
+  margin-left: 65px; }
+
+.comments-button {
   margin-left: 65px; }
 
 @media screen and (min-width: 750px) {

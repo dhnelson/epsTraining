@@ -23,12 +23,14 @@
   @endif
 
   @if (isset($comments[$comment->id]))
-    <button type="button" class='Button pull-right'><small>Show More</small></button>
-      <div id="toggle" style="display: none;">
-        <ul id="comment-children">
-          @include ('blog.list', ['collection' => $comments[$comment->id]])
-        </ul>
-      </div>
+    <div class="comments-button"> 
+      <a class='Button'><small>Comments &#8597;</small></a>
+        <div id="toggle" style="display: none;">
+          <ul id="comment-children">
+            @include ('blog.list', ['collection' => $comments[$comment->id]])
+          </ul>
+        </div>
+    </div>
   @endif
 
 </div>
