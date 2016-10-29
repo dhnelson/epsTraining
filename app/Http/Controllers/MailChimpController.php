@@ -15,10 +15,8 @@ class MailChimpController extends Controller
     | Blog Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles the
+    | This controller handles the Mailchimp API; the subscribe button and a plain email.
     | 
-    | 
-    |
     */
     
     protected $mailchimp;

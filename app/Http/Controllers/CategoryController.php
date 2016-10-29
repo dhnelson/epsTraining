@@ -16,9 +16,7 @@ class CategoryController extends Controller
     | Category Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles the
-    | 
-    | 
+    | This controller handles displaying, saving, and editing categories.
     |
     */
     

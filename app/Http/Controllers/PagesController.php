@@ -13,9 +13,7 @@ class PagesController extends Controller
     | Blog Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles the
-    | 
-    | 
+    | This controller handles the views that don't have any logic. 
     |
     */
     

@@ -18,9 +18,7 @@ class ContactController extends Controller
     | Blog Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles the
-    | 
-    | 
+    | This controller handles the contact form and sending the contact email.
     |
     */
 

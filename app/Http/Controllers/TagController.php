@@ -16,9 +16,7 @@ class TagController extends Controller
     | Blog Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles the
-    | 
-    | 
+    | This controller handles displaying, saving, editing, and deleting tags.
     |
     */
     

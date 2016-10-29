@@ -20,8 +20,8 @@ class BlogController extends Controller
     | Blog Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles all aspects of the blog icluding a list of all 
-    | published posts, the full page of a single post, a list of all categories 
+    | This controller handles all aspects of the blog icluding the list of all 
+    | published posts, the full page of a single post, the list of all categories 
     | and tags, and a search bar.
     |
     */

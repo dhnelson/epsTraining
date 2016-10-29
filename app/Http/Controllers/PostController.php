@@ -20,10 +20,8 @@ class PostController extends Controller
     | Blog Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles the
+    | This controller handles displaying, saving, editing, and deleting blog posts. 
     | 
-    | 
-    |
     */
     
     /**
@@ -61,7 +59,7 @@ class PostController extends Controller
             $tag_array[$tag->id] = $tag->name;
         }
 
-        return view('posts.create')->with('categories', $category_array)->with('tags', $tag_array);
+        return view('posts.create')->with(['categories'=>$category_array, 'tags'=>$tag_array]);
     }
 
 
@@ -142,7 +140,7 @@ class PostController extends Controller
             $tag_array[$tag->id] = $tag->name;
         }
 
-        return view('posts.edit')->with('post', $posts)->with('categories', $category_array)->with('tags', $tag_array);
+        return view('posts.edit')->with(['post'=>$posts, 'categories'=>$category_array, 'tags'=>$tag_array]);
     }
 
     /**
