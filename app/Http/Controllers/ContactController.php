@@ -12,12 +12,22 @@ use Purifier;
 
 
 class ContactController extends Controller
-
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Blog Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles the
+    | 
+    | 
+    |
+    */
+
 	public function contact() {
 
     	return view('contact.contact');
-}
+    }
 
     public function ContactForm(ContactFormRequest $request){
 

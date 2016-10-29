@@ -21,7 +21,8 @@ a {
   text-decoration: none; }
 
 .navbar {
-  background-color: black; }
+  background-color: black;
+  font-weight: bold; }
   @media screen and (max-width: 770px) {
     .navbar {
       padding-bottom: 40px; } }

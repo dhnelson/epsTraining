@@ -12,6 +12,17 @@ use Purifier;
 
 class CommentController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Blog Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles the
+    | 
+    | 
+    |
+    */
+
     /**
      * Display a listing of the resource.
      *

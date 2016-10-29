@@ -64,10 +64,6 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        if (isset($_POST['subscribe'])) {
-           Subscribe::create([ 'email' => $data['email'] ]);
-        }
-
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

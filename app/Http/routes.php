@@ -123,13 +123,8 @@ Route::get('comments/{id}/delete', [
 */
 
 Route::post('contact', [
-	'as' => 'contact_post',
+	'as' => 'contact_form',
 	'uses' => 'ContactController@ContactForm'
-]);
-
-Route::post('emailSubscribers', [
-	'as' => 'subscribers_post',
-	'uses' => 'MailChimpController@emailSubscribersForm'
 ]);
 
 Route::post('comments/{post_id}', [
@@ -141,6 +136,11 @@ Route::post('comments/{post_id}', [
 Route::post('blog', [
 	'as' => 'subscribe',
 	'uses' => 'MailChimpController@subscribe'
+]);
+
+Route::post('emailSubscribers', [
+	'as' => 'email_subscribers_form',
+	'uses' => 'MailChimpController@emailSubscribersForm'
 ]);
 
 

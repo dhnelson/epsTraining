@@ -32,6 +32,7 @@ a {
 
 	.navbar {
 		background-color: black;
+		font-weight: bold;
 		@media screen and (max-width: 770px) {
 			padding-bottom: 40px;
 	}
@@ -87,14 +88,6 @@ a {
 	}
 
 // Spacing
-
-	.login-register-spacing {
-		margin-top: 20px;
-	}
-
-	.login-register-or-spacing {
-		margin: 0px 0 10px 0;
-	}
 
 	.btn-h1-spacing {
 		margin-top: 15px; 

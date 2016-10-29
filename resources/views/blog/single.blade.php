@@ -54,7 +54,7 @@
 @else
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <h3><a href="{{ url('/login') }}">Login</a> or <a href="{{ url('/register') }}">Register</a> to Leave a Comment</h3> 
+      <h3><a data-toggle="modal" data-target="#myModalLogin">Login</a> or <a data-toggle="modal" data-target="#myModalRegister"></span> Register</a> to Leave a Comment</h3> 
     </div> 
   </div>
 @endif
@@ -71,5 +71,8 @@
   
   </div>
 </div>
+
+@include('layouts._modal_login')
+@include('layouts._modal_register')
 
 @stop

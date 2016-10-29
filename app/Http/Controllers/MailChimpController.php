@@ -10,6 +10,17 @@ use App\Subscribe;
 
 class MailChimpController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Blog Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles the
+    | 
+    | 
+    |
+    */
+    
     protected $mailchimp;
 
     protected $listId = '6a55d5c8d6';

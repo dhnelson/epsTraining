@@ -11,6 +11,17 @@ use App\Post;
 
 class CategoryController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Category Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles the
+    | 
+    | 
+    |
+    */
+    
     /**
      * Display a listing of the resource.
      *
@@ -72,6 +83,6 @@ class CategoryController extends Controller
 
         flash()->overlay('Thanks!', 'Your Category Was Updated Successfully');
 
-        return redirect()->route('categories.show', $category ->id);
+        return redirect()->route('categories.show', $category->id);
     }
 }

@@ -8,6 +8,17 @@ use App\Http\Requests;
 
 class PagesController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Blog Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles the
+    | 
+    | 
+    |
+    */
+    
     public function home() {
         return view('pages.home');
     }
