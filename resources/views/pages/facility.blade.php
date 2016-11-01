@@ -53,7 +53,7 @@
       </tr>
 
       <tr>
-        <td>Saturday & Sunday</td>
+        <td>Saturday &amp; Sunday</td>
         <td>7 AM - 7 PM</td>
       </tr>
 

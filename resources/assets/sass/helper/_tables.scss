@@ -1,0 +1,16 @@
+.table, th, thead { border: 1px solid #000000; 
+	text-align: center;
+} 
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td { 
+	border: 1px solid #000000; 
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #E31E19;
+}

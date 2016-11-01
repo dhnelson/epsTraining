@@ -28,269 +28,42 @@ a {
     text-decoration: none;
 }
 
+#social_share_buttons { 
+	display: flex; 
+	justify-content: center; 
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+
+p > iframe {
+  width: 100% !important;
+  height: 450px !important;
+}
+
 // Navigation Bar and Footer
 
-	.navbar {
-		background-color: black;
-		font-weight: bold;
-		@media screen and (max-width: 770px) {
-			padding-bottom: 40px;
-	}
-	}
-
-	.navbar-inverse, .nav.navbar-nav li a {
-	   	color: #E31E19;
-	   	@media screen and (min-width: 770px) {
-	   	line-height: 70px;
-	}
-	}
-
-	.navbar-brand {
-		margin-right: 15px;
-	}
-
-	@media screen and (max-width: 750px) {
-	#myNavbar {
-		margin-top: 45px;
-	}
-	}
-
-	#myDropdown {
-		line-height: 20px;
-	}
-
-	footer {
-		position: relative;
-	    bottom: -20px;
-	    margin-bottom: -100px;
-	}
-
-	.footer-copyright-padding {
-	padding-right: 20px;
-	}
-
-// API's and Embeds
-
-	#social_share_buttons { 
-		display: flex; 
-		justify-content: center; 
-	}
-
-	#map {
-	    width: 100%;
-	    height: 400px;
-	    background-color: grey;
-	}
-
-	p > iframe {
-	  width: 100%    !important;
-	  height: 450px   !important;
-	}
+	@import "helper/navFooter";
 
 // Spacing
 
-	.btn-h1-spacing {
-		margin-top: 15px; 
-	}
+	@import "helper/spacing";
 
-	.email-subscribers-btn {
-		margin-left: 5px;
-	}
+// Blog 
 
-	.form-spacing-top, .edit-box-spacing  {
-		margin-top: 25px;
-	}
+	@import "helper/blog";
+	
+	@import "helper/blogSidebar";
 
-	@media screen and (min-width: 750px) {
-	.contact-box-spacing {
-		margin-top: 80px;
-	}
-	}
+	@import "helper/comments";			
 
-	@media screen and (min-width: 750px) {
-	.location-box-spacing {
-		margin-top: 50px;
-	}
-	}
+// Photos Page 
 
-// Blog Specific SCSS
-
-	.post-body-padding {
-		padding: 15px 0 15px 0;
-	}
-
-	.single-post-body-padding {
-		padding: 5px 0 15px 0;
-	}
-
-	.blog-title-image-spacing {
-		display: inline-block;
-		vertical-align: middle;
-	}
-
-	.blog-image-spacing {
-		padding-right: 10px;
-	}
-
-	@media screen and (max-width: 750px) {
-	.blog-image-spacing > img {
-		height: 200px; 
-		width: 350px;
-		width: 100%;
-	}
-	}
-
-	@media screen and (min-width: 750px) {
-	#post-title-spacing {
-		margin: -10px 0 -5px 0;
-	}
-	}
-
-	// Blog Sidebar
-
-		.blog-index-sidebar {
-			height: 100%;
-			background-color: #E9E9E9;
-			margin-top: 25px;
-			padding: 15px 10px 0 25px;
-			border-radius: 25px;
-		}
-
-
-		.blog-index-sidebar-content {
-			padding: 15px 0px 0px 2px;
-		}
-		
-
-		.blog-index-sidebar-contact {
-			padding: 15px 0px 0px 2px;
-		}
-
-	    .subscribe-spacing {
-	    	padding: 0 54px 0 0;
-	    }
-
-	    .subscribe-btn {
-	    	display: block;
-	    	display: fixed;
-	    }
-
-		//Comment System SCSS
-
-			.comment {
-				margin-bottom: 20px;
-				background-color: #E9E9E9;
-				padding: 10px 10px 0px 10px;
-				border-radius: 10px;
-			}
-
-			#comment-children {
-				margin-left: 22px;
-
-			}
-
-			#comment-form {
-				margin-top: -20;
-			}
-
-			.author-image {
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				float: left;
-			}
-
-			.author-name {
-				float: left;
-				margin-left: 15px; 
-			}
-
-			.author-name>h4 {
-				margin: 5px 0px;
-				
-			}
-
-			.author-time {
-				font-size: 12px;
-				font-style: italic;
-				color: #aaa;
-			}
-
-			.comment-content {
-				clear: both;
-				margin-left: 65px;
-				margin-botom: 25px;
-				font-size: 16px;
-				line-height: 1.3em;
-			}
-
-			.comments-title {
-				margin-bottom: 10px;
-				margin-top: 10px;
-			}
-
-			.comments-title>span {
-				margin-right: 15px;
-			}
-
-			.glyphicon-comment {
-				margin-right: 5px !important;
-			}
-
-			.reply-spacing {
-				margin-left: 65px;
-			}
-
-			.comments-button {
-				margin-left: 65px;
-			}
-
-// Photos Page SCSS
-
-	@media screen and (min-width: 750px) {
-	.carousel {
-		width: 100%;
-	    height: 625px;
-	    padding: 10px 70px;
-	}
-	}
-
-	@media screen and (min-width: 750px) {
-	.carousel-inner > .item > img {
-	    margin: 0 auto;
-	}
-	}
-
-	@media screen and (max-width: 750px) {
-	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-		width: 100%;
-		margin: auto;
-	}
-	}
-
-	@media screen and (max-width: 750px) {
-	img {
-		width: 100%;
-		margin: auto;
-	}
-	}
-
+	@import "helper/photos";
 
 // Tables
 
-	.table, th, thead { border: 1px solid #000000; 
-		text-align: center;
-	} 
-
-	.table-bordered > thead > tr > th,
-	.table-bordered > tbody > tr > th,
-	.table-bordered > tfoot > tr > th,
-	.table-bordered > thead > tr > td,
-	.table-bordered > tbody > tr > td,
-	.table-bordered > tfoot > tr > td { 
-		border: 1px solid #000000; 
-	}
-
-	.table tbody tr:hover td, .table tbody tr:hover th {
-	    background-color: #E31E19;
-	}
+	@import "helper/tables";

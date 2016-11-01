@@ -1,0 +1,27 @@
+@media screen and (min-width: 750px) {
+.carousel {
+	width: 100%;
+    height: 625px;
+    padding: 10px 70px;
+}
+}
+
+@media screen and (min-width: 750px) {
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 750px) {
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	width: 100%;
+	margin: auto;
+}
+}
+
+@media screen and (max-width: 750px) {
+img {
+	width: 100%;
+	margin: auto;
+}
+}

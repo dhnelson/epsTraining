@@ -1,0 +1,31 @@
+.post-body-padding {
+	padding: 15px 0 15px 0;
+}
+
+.single-post-body-padding {
+	padding: 5px 0 15px 0;
+}
+
+.blog-title-image-spacing {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.blog-image-spacing {
+	padding-right: 10px;
+}
+
+@media screen and (max-width: 750px) {
+.blog-image-spacing > img {
+	height: 200px; 
+	width: 350px;
+	width: 100%;
+}
+}
+
+@media screen and (min-width: 750px) {
+#post-title-spacing {
+	margin: -10px 0 -5px 0;
+}
+}
+
