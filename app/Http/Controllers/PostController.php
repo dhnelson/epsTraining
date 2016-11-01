@@ -45,14 +45,18 @@ class PostController extends Controller
     {
         $categories = Category::all();
 
+        // variable that can be accessed outside of scope of foreach loop
         $category_array = [];
 
+        // category id is key and category name is value in foreach loop to choose 
+        // a category from drop-down list in posts/create.blade.php
         foreach ($categories as $category) {
             $category_array[$category->id] = $category->name;
         }
 
         $tags = Tag::all();
 
+        //same as above
         $tag_array = [];
 
         foreach ($tags as $tag) {
@@ -79,6 +83,7 @@ class PostController extends Controller
         $post->body        = $request->body;
         $post->category_id = $request->category;
  
+        // pulls in blog post's featured image, if one is attached
         if ($request->hasFile('featured_image')) {
             $image = $request->file('featured_image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
@@ -90,6 +95,7 @@ class PostController extends Controller
 
         $post->save();
 
+        // pulls in selected tags, if any are selected
         if (isset($request->tags)) {
             $post->tags()->sync($request->tags, false);
         } else {
@@ -126,6 +132,7 @@ class PostController extends Controller
 
         $categories = Category::all();
 
+        // same as create method
         $category_array = [];
 
         foreach ($categories as $category) {
@@ -134,6 +141,7 @@ class PostController extends Controller
 
         $tags = Tag::all();
 
+        // same as create method
         $tag_array = [];
 
         foreach ($tags as $tag) {
@@ -160,6 +168,7 @@ class PostController extends Controller
         $post->body        = $request->body;
         $post->category_id = $request->category_id;
 
+        // updates featured image and deletes old one
         if ($request->hasFile('featured_image')) {
             $image = $request->file('featured_image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
