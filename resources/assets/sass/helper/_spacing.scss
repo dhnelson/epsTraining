@@ -1,23 +1,26 @@
 .btn-h1-spacing {
-		margin-top: 15px; 
-	}
+	margin-top: 15px; 
+}
 
-	.email-subscribers-btn {
-		margin-left: 5px;
-	}
+.email-subscribers-btn {
+	margin-left: 5px;
+}
 
-	.form-spacing-top, .edit-box-spacing  {
-		margin-top: 25px;
-	}
+.form-spacing-top, .edit-box-spacing  {
+	margin-top: 25px;
+}
 
-	@media screen and (min-width: 750px) {
-	.contact-box-spacing {
-		margin-top: 80px;
-	}
-	}
+@media screen and (min-width: 750px) {
+.contact-box-spacing {
+	margin-top: 115px;
+}
+}
 
-	@media screen and (min-width: 750px) {
-	.location-box-spacing {
-		margin-top: 50px;
-	}
-	}
+.delete-comment-spacing {
+	margin: 1px;
+}
+
+.well-spacing {
+	padding: 0px 19px 8px 19px;
+}
+

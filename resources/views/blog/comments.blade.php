@@ -1,36 +1,35 @@
 <div class="comment">
-  <div class="author-info">
-    <img class="author-image" src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?d=identicon" }}" >
-    <div class="author-name">
-      <h4>{{ $comment->name }}     
-        @if(Auth::check())         
-          @if (Auth::user()->email == $comment->email)
-          <a href="{{ route('comments.edit', $comment->id) }}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
-          <a href="{{ route('comments.delete', $comment->id) }}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
-          @endif 
-        @endif
-      </h4>
-      <p class="author-time">{{ date('F nS, Y - g:iA', strtotime($comment->created_at)) }}</p>
+    <div class="author-info">
+        <img class="author-image" src="{{ "https://www.gravatar.com/avatar/" . md5(strtolower(trim($comment->email))) . "?d=identicon" }}" >
+            <div class="author-name">
+                <h4>{{ $comment->name }}     
+                    @if(Auth::check())         
+                        @if (Auth::user()->email == $comment->email)
+                            <a href="{{ route('comments.edit', $comment->id) }}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href="{{ route('comments.delete', $comment->id) }}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
+                        @endif 
+                    @endif
+                </h4>
+                <p class="author-time">{{ date('F nS, Y - g:iA', strtotime($comment->created_at)) }}</p>
+            </div>
     </div>
-  </div>
 
-  <div class="comment-content text-justify">
-    {!! $comment->comment !!}
-  </div>
+    <div class="comment-content text-justify">
+        {!! $comment->comment !!}
+    </div>
 
-  @if (Auth::check())
-      @include ('blog.form', ['parentId' => $comment->id])
-  @endif
+    @if (Auth::check())
+        @include ('blog.form', ['parentId' => $comment->id])
+    @endif
 
-  @if (isset($comments[$comment->id]))
-    <div class="comments-button"> 
-      <a class='Button'><small>Comments &#8597;</small></a>
-        <div id="toggle" style="display: none;">
-          <ul id="comment-children">
-            @include ('blog.list', ['collection' => $comments[$comment->id]])
-          </ul>
+    @if (isset($comments[$comment->id]))
+        <div class="comments-button"> 
+            <a class='Button'><small>Replies &#8597;</small></a>
+                <div id="toggle" style="display: none;">
+                    <ul id="comment-children">
+                      @include ('blog.list', ['collection' => $comments[$comment->id]])
+                    </ul>
+                </div>
         </div>
-    </div>
-  @endif
-
+    @endif
 </div>

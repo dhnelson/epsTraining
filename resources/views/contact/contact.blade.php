@@ -5,11 +5,10 @@
 @section('content') 
 
 <div class="row">
-	<div class="col-sm-6 col-md-offset-1">
-
-        <h2 class="text-center blue">Contact Me Today!</h2>
-
-    {!! Form::open (array('action' => 'ContactController@ContactForm', 'data-parsley-validate' => '')) !!} 
+	<div class="col-sm-6 col-md-offset-1"><br>
+        <div class="well">
+        <h2 class="text-center" id="bio">Contact Me Today!</h2>
+        {!! Form::open (array('action' => 'ContactController@ContactForm', 'data-parsley-validate' => '')) !!} 
     
             <div class="form-group red">
                 {{ Form::label('Name:') }}
@@ -39,13 +38,14 @@
                 {{ Form::submit('Send Message', 
                   array('class'=>'btn btn-primary')) }}
             </div>
-    {!! Form::close() !!}                       
+    {!! Form::close() !!} 
+    </div>                      
     </div>
 
     <div class="col-md-4 contact-box-spacing">
         <div class="well">
             <dl>
-                <dt class="red"><span class="blue glyphicon glyphicon-earphone"></span> Call or Text:</dt>
+                <dt class="red"><span class="glyphicon glyphicon-earphone"></span> Call or Text:</dt>
                     <ul>
                         <li><dd><span>Whippany Athletic Club: <a href="tel:1-973-887-2496">(973) 887-2496</a></span></dd></li>
                        <li><dd><span>Cellphone: <a href="tel:1-646-717-3142">(646) 717-3142</a></span></dd></li>
@@ -53,7 +53,7 @@
             </dl>
 
             <dl>
-                <dt class="red"><span class="blue glyphicon glyphicon-globe"></span> Social Media:</dt>
+                <dt class="red"><span class="glyphicon glyphicon-globe"></span> Social Media:</dt>
                     <ul>
                         <li><dd><a href="https://www.facebook.com/Evolution-Performance-Systems-131558953564049/?fref=ts"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></dd></li>
                     <li><dd><a href="https://www.instagram.com/eps_training"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></dd></li>

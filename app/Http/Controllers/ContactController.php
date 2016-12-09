@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -9,7 +8,6 @@ use App\Http\Requests\ContactFormRequest;
 use App\Contact;
 use Mail;
 use Purifier;
-
 
 class ContactController extends Controller
 {
@@ -22,13 +20,13 @@ class ContactController extends Controller
     |
     */
 
-	public function contact() {
-
+	public function contact() 
+    {
     	return view('contact.contact');
     }
 
-    public function ContactForm(ContactFormRequest $request){
-
+    public function ContactForm(ContactFormRequest $request)
+    {
         Contact::create($request->all());
 
         $data = [

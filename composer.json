@@ -11,7 +11,8 @@
         "mews/purifier": "^2.0",
         "intervention/image": "^2.3",
         "unisharp/laravel-filemanager": "^1.6",
-        "skovmand/mailchimp-laravel": "^1.0"
+        "skovmand/mailchimp-laravel": "^1.0",
+        "square/connect": "2.0.0.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

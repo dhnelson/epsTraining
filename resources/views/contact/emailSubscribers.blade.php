@@ -9,7 +9,7 @@
 <div class="row">
 	<div class="col-sm-8 col-md-offset-2">
 
-        <h2 class="text-center blue">Email Subscribers</h2>
+        <h2 class="text-center">Email Subscribers</h2>
 
     {!! Form::open (array('action' => 'MailChimpController@emailSubscribers', 'data-parsley-validate' => '')) !!} 
             <!-- Subject input-->

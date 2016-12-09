@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -93,7 +92,9 @@ class PostController extends Controller
             $post->image = $filename;
         }
 
-        $post->save();
+        if (!$post->save()) {
+            flash()->overlay('Error!', 'Action Unsuccessful', $level = 'error');
+        }
 
         // pulls in selected tags, if any are selected
         if (isset($request->tags)) {
@@ -182,7 +183,9 @@ class PostController extends Controller
             Storage::delete($oldFileName);
         }
 
-        $post->save();
+        if (!$post->save()) {
+            flash()->overlay('Error!', 'Action Unsuccessful', $level = 'error');
+        }
 
         if (isset($request->tags)) {
             $post->tags()->sync($request->tags, true);

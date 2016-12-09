@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -7,7 +6,6 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TagFormRequest;
 use App\Tag;
-
 
 class TagController extends Controller
 {   
@@ -44,7 +42,9 @@ class TagController extends Controller
 
         $tag->name = $request->name;
 
-        $tag->save();
+        if (!$tag->save()) {
+            flash()->overlay('Error!', 'Action Unsuccessful', $level = 'error');
+        }
 
         flash()->overlay('Thanks!', 'Your New Tag Was Created Successfully');
 
@@ -90,7 +90,9 @@ class TagController extends Controller
 
         $tag->name = $request->name;
 
-        $tag->save();
+        if (!$tag->save()) {
+            flash()->overlay('Error!', 'Action Unsuccessful', $level = 'error');
+        }
 
         flash()->overlay('Thanks!', 'Your Tag Was Updated Successfully');
 

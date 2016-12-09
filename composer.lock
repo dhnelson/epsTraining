@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bc58435da2ebbd28dc3b9a080a661c11",
-    "content-hash": "20d23835de64614c73261865f08eebcb",
+    "hash": "8f754fc3e7fa6f0eeab976f11e8c322c",
+    "content-hash": "067f3ce778316f780648b4668e9f5d7f",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1306,6 +1306,57 @@
             ],
             "description": "A minimal service provider to set up and use the Mailchimp Api v2 PHP library in Laravel 5.*",
             "time": "2016-08-25 11:08:10"
+        },
+        {
+            "name": "square/connect",
+            "version": "2.0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/square/connect-php-sdk.git",
+                "reference": "949202cb41c8df51b6f70a88d3649679905b9bd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/square/connect-php-sdk/zipball/949202cb41c8df51b6f70a88d3649679905b9bd0",
+                "reference": "949202cb41c8df51b6f70a88d3649679905b9bd0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SquareConnect\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache v2"
+            ],
+            "authors": [
+                {
+                    "name": "Square, Inc.",
+                    "homepage": "https://github.com/Square/connect-php-sdk"
+                }
+            ],
+            "description": "PHP client library for the Square Connect v2 API",
+            "homepage": "http://swagger.io",
+            "keywords": [
+                "api",
+                "php",
+                "sdk",
+                "swagger"
+            ],
+            "time": "2016-05-20 01:19:58"
         },
         {
             "name": "swiftmailer/swiftmailer",

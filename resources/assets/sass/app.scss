@@ -3,15 +3,20 @@
 body {
 	background-color: #D3D3D3;
 	color: black;
-	margin-bottom:100px;
+	position: relative;
+	margin: 0;
+	padding-bottom: 8rem;
+	min-height: 100%;
+	font: 400 15px Lato, sans-serif;
+    line-height: 1.8; 
+}
+
+.indent {
+    text-indent: 50px;
 }
 
 .red, h1, h2, h3, h4 {
 	color: #E31E19;
-}
-
-.blue {
-	color: #0089de;
 }
 
 #heading h5, h5, h4, h4 { 
@@ -23,7 +28,7 @@ body {
 }
 
 a {
-    color: #0089de;
+    color: #428bca;
     cursor: pointer;
     text-decoration: none;
 }
@@ -37,6 +42,7 @@ a {
     width: 100%;
     height: 400px;
     background-color: grey;
+    border-radius: 5px;
 }
 
 p > iframe {

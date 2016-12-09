@@ -6,17 +6,6 @@ namespace App\Http;
 class Flash 
 
 {
-	/*
-    |--------------------------------------------------------------------------
-    | Blog Controller
-    |--------------------------------------------------------------------------
-    |
-    | 
-    | 
-    | 
-    |
-    */
-
 
 	public function create($title, $message, $level, $key = 'flash_message') 
 

@@ -21,14 +21,20 @@
                           <li><a id="myDropdown" href="{{ route('king') }}">The King</a></li> 
                           <li><a id="myDropdown" href="{{ route('team') }}">The Team</a></li>
                           <li><a id="myDropdown" href="{{ route('facility') }}">Facility</a></li>
+                          <li><a id="myDropdown" href="{{ route('testimonials') }}">Testimonials</a></li>
                           <li><a id="myDropdown" href="{{ route('pics') }}">Pictures</a></li>
                         </ul>
                     </li>
                     <li class="{{ Request::is('services') ? "active" : ""}}"><a href="{{ route('services') }}">SERVICES</a></li>
-                    <li class="{{ Request::is('testimonials') ? "active" : ""}}"><a href="{{ route('testimonials') }}">TESTIMONIALS</a></li>
                     <li class="{{ Request::is('contact') ? "active" : ""}}"><a href="{{ route('contact') }}">CONTACT</a></li>
                     </li>
-                    <li class="{{ Request::is('blog') ? "active" : ""}}"><a href="{{ route('blog.index') }}">BLOG</a></li>
+                    <li class="dropdown {{ Request::is('instafeed', 'blog') ? "active" : ""}}"><a class="dropdown-toggle" data-toggle="dropdown" href="#">EPS NEWS<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a id="myDropdown" href="{{ route('instafeed') }}">InstaFeed</a></li> 
+                          <li><a id="myDropdown" href="{{ route('blog.index') }}">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="{{ Request::is('shop') ? "active" : ""}}"><a href="{{ route('shop') }}">SHOP</a></li>
                 </ul>
                 
                 <!-- Right Side Of Navbar -->

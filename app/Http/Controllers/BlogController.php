@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -26,7 +25,8 @@ class BlogController extends Controller
     |
     */
 
-    public function index() {
+    public function index() 
+    {
 
         /* retrieves and returns a sampling of each blog post */
         $posts = Post::orderBy('created_at', 'desc')->paginate(5);
@@ -36,32 +36,32 @@ class BlogController extends Controller
         return view('blog.index')->with(['posts'=>$posts, 'categories'=>$categories, 'tags'=>$tags]);
     } 
 
-    public function single($slug) {
-
+    public function single($slug) 
+    {
         /* returns request to see a blog post with comments */
-    	$post = Post::where('slug', '=', $slug)->first();
+        $post = Post::where('slug', '=', $slug)->first();
 
     	return view('blog.single')->with(['post'=>$post, 'comments'=>$post->getThreadedComments()]);
     }
 
-    public function category($id) {
-
+    public function category($id) 
+    {
         /* returns a category with all related posts */
         $category = Category::find($id);
 
         return view('blog.category')->with('category', $category);
     }
 
-    public function tag($id) {
-
+    public function tag($id) 
+    {
         /* returns a tag with all related posts */
         $tag = Tag::find($id);
 
         return view('blog.tag')->with('tag', $tag);
     }
 
-    public function search() {
-
+    public function search() 
+    {
         /* searches all post bodies for entered keyword and displays all related information */
         Purifier::clean($search = \Request::get('keyword')); 
  

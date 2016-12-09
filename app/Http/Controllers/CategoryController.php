@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -44,7 +43,9 @@ class CategoryController extends Controller
 
         $category->name = $request->name;
        
-        $category->save();
+        if (!$category->save()) {
+            flash()->overlay('Error!', 'Action Unsuccessful', $level = 'error');
+        }
 
         flash()->overlay('Thanks!', 'Your New Category Was Created Successfully');
 
@@ -77,7 +78,9 @@ class CategoryController extends Controller
 
         $category->name = $request->name;
 
-        $category->save();
+        if (!$category->save()) {
+            flash()->overlay('Error!', 'Action Unsuccessful', $level = 'error');
+        }
 
         flash()->overlay('Thanks!', 'Your Category Was Updated Successfully');
 

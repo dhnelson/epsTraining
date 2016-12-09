@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -51,7 +50,9 @@ class CommentController extends Controller
         $comment->parent_id = $request->parent_id;
         $comment->post()->associate($post);
 
-        $comment->save();
+        if (!$comment->save()) {
+            flash()->overlay('Error!', 'Action Unsuccessful', $level = 'error');
+        }
 
         flash()->success('Thanks!', 'Your Comment Was Submitted');
 
@@ -82,8 +83,11 @@ class CommentController extends Controller
     {
         $comment = Comment::find($id);
 
-        $comment->comment  = Purifier::clean($request->comment);
-        $comment->save();
+        $comment->comment = Purifier::clean($request->comment);
+        
+        if (!$comment->save()) {
+            flash()->overlay('Error!', 'Action Unsuccessful', $level = 'error');
+        }
 
         flash()->success('Thanks!', 'Your Comment Was Updated');
 

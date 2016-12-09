@@ -86,6 +86,11 @@ Route::get('facility', [
 	'uses' => 'PagesController@facility'
 ]);
 
+Route::get('shop', [
+	'as' => 'shop', 
+	'uses' => 'PagesController@shop'
+]);
+
 Route::get('blog', [
 	'as' => 'blog.index', 
 	'uses' => 'BlogController@index'
@@ -116,6 +121,11 @@ Route::get('comments/{id}/delete', [
 	'uses' => 'CommentController@delete'
 ]);
 
+Route::get('instafeed', [
+	'as' => 'instafeed',
+	'uses' => 'PagesController@instafeed'
+]);
+
 /*
 |**************
 | POST Routes *
@@ -143,7 +153,7 @@ Route::post('emailSubscribers', [
 	'uses' => 'MailChimpController@emailSubscribersForm'
 ]);
 
-
-
-
-
+Route::post('shop', [
+	'as' => 'shop',
+	'uses' => 'PurchaseController@payment'
+]);

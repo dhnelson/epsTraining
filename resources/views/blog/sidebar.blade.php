@@ -1,6 +1,6 @@
 <div class="col-md-3 blog-index-sidebar">
     {!! Form::open (['action' => 'MailChimpController@subscribe', 'class'=>'navbar-form subscribe-spacing', 'data-parsley-validate' => '', 'data-parsley-errors-container'=>'#subscribe-errors']) !!}  
-        <div class="input-group blue">
+        <div class="input-group red">
           {{ Form::label('Subscribe:') }}
           {{ Form::text('email', null, ['required'=>'', 'class'=>'form-control', 'placeholder'=>'Enter Email...']) }}
             <span class="input-group-btn subscribe-btn">
@@ -14,14 +14,14 @@
 
     <div class="blog-index-sidebar-contact">
         <dl>
-            <dt class="red"><span class="glyphicon glyphicon-earphone blue"></span> Call or Text Me:</dt>
+            <dt class="red"><span class="glyphicon glyphicon-earphone"></span> Call or Text Me:</dt>
                 <ul>
                     <li><dd><span>Cell: <a href="tel:1-646-717-3142">(646) 717-3142</a></span></dd></li>
                     <li><dd><span>Gym: <a href="tel:1-973-887-2496">(973) 887-2496</a></span></dd></li>
                 </ul>
         </dl>
         <dl>
-            <dt class="red"><span class="glyphicon glyphicon-globe blue"></span> My Social Media:</dt>
+            <dt class="red"><span class="glyphicon glyphicon-globe"></span> My Social Media:</dt>
                 <ul>
                     <li><dd><a href="https://www.facebook.com/Evolution-Performance-Systems-131558953564049/?fref=ts"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></dd></li>
                 <li><dd><a href="https://www.instagram.com/eps_training"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></dd></li>
@@ -30,7 +30,7 @@
     </div>  
       
     {!! Form::open(['method'=>'GET', 'route'=>'blog.search', 'role'=>'keyword', 'class'=>'navbar-form subscribe-spacing', 'data-parsley-validate' => '', 'data-parsley-errors-container'=>'#search-errors'])  !!}
-        <div class="input-group blue">
+        <div class="input-group red">
           {{ Form::label('Search:') }}
           {{ Form::text('keyword', null, ['required'=>'', 'class'=>'form-control', 'placeholder'=>'Search Posts...']) }}
             <span class="input-group-btn subscribe-btn">
