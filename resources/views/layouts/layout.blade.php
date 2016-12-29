@@ -4,19 +4,20 @@
         @include('layouts._head')
     </head>    
 
-    @include('layouts._js')
+        @include('layouts._js')
 
 <body>
-
+        @include('layouts.analyticstracking')
+        
         @include('flash')
 
         @include('layouts._navigation')
 
+        @include('errors.error')
+
     <div class="container-fluid">
 
         @include('layouts._a2a')
-
-        @include('errors.error')
 
         @yield('content')
         

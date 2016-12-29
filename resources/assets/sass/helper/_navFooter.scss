@@ -1,14 +1,14 @@
 .navbar {
 	background-color: black;
 	font-weight: bold;
-	@media screen and (max-width: 770px) {
+	@media screen and (max-width: 991px) {
 		padding-bottom: 40px;
 }
 }
 
 .navbar-inverse, .nav.navbar-nav li a {
    	color: #E31E19;
-   	@media screen and (min-width: 770px) {
+   	@media screen and (min-width: 991px) {
    	line-height: 70px;
 }
 }
@@ -17,7 +17,7 @@
 	margin-right: 15px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 991px) {
 #myNavbar {
 	margin-top: 45px;
 }
@@ -35,3 +35,13 @@ footer {
 	left: 0;
 	padding: 15px;
 }
+
+.footer-left {
+	float: left;
+}
+
+.footer-right {
+	float: right;
+}
+
+@import "navbarBreakpoint";

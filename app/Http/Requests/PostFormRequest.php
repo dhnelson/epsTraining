@@ -26,7 +26,7 @@ class PostFormRequest extends Request
         return [
             'author'         => 'required|max:255',
             'title'          => 'required|max:255',
-            'slug'           => 'required|alpha_dash|max:255|min:5|unique:posts,slug',
+            'slug'           => 'required|alpha_dash|max:255|min:1|unique:posts,slug',
             'body'           => 'required',
             'category'       => 'required|integer',
             'featured_image' => 'sometimes|image'

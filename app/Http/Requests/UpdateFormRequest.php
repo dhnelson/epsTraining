@@ -28,7 +28,7 @@ class UpdateFormRequest extends Request
         return [
             'author'      => 'required|max:255',
             'title'       => 'required|max:255',
-            'slug'        => 'required|alpha_dash|max:255|min:5|unique:posts,slug,' . $this->posts,
+            'slug'        => 'required|alpha_dash|max:255|min:1|unique:posts,slug,' . $this->posts,
             'body'        => 'required',
             'category_id' => 'required|integer'
         ];

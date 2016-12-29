@@ -19,7 +19,9 @@
                 <p class="text-justify">One on one coaching or programming including nutrition, mobility, offseason hypertrophy, strength cycles, and meet peaking cycles</p>
 
             <h3>Sports Specific:</h3>
-                <p class="text-justify">Sports performance programs designed to increase speed, power, agility, and core strength. Available in 1-on-1 or group settings.</p>
+                <p class="text-justify">Sports performance programs for every athlete designed to increase speed, power, agility, and core strength. Available in 1-on-1 or group settings.</p>
+            <h3>MMA &amp; Boxing Training:</h3>
+                <p class="text-justify"><b>Novice: </b>Cardio and fitness fighter training for the non-competitor including technical work.<br><b>Professional: </b>Intense strength and conditioning program, technical work, and weight-cut management for the competetive fighter.</p>
         </div>
     </div>
 

@@ -11,6 +11,18 @@ body {
     line-height: 1.8; 
 }
 
+.bgpic {
+	background-image: url('../images/scott-webb.jpg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;        
+    width: 100%;            
+    height: 800px;       
+    margin-left: auto;      
+    margin-right: auto;       
+}
+
 .indent {
     text-indent: 50px;
 }

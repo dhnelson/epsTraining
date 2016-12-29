@@ -7,7 +7,7 @@
 
 @section('content') 
 
-<div class="row">
+<div class="row"><br>
     <div class="col-md-8 col-md-offset-2">
         @if (isset($post->image)) 
             <br><img class="img-rounded img-responsive" src="{{ asset('images/uploads/' . $post->image) }}" alt="blog photo" height="400" width="820" /><br>
@@ -68,7 +68,6 @@
             <h3 class="comments-title"><span class="glyphicon glyphicon-comment"></span>
               {{ $post->comments()->count() }} {{ $post->comments()->count() == 1 ? 'Comment':'Comments' }}
             </h3>
-    
             @if ($post->comments()->count() !== 0)
                 @include ('blog.list', ['collection' => $comments['root']])
             @endif

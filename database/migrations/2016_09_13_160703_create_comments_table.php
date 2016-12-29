@@ -20,6 +20,7 @@ class CreateCommentsTable extends Migration
             $table->integer('post_id')->index()->unsigned();
             $table->integer('parent_id')->index() ->nullable();
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
         });
     }

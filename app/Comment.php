@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Comment extends Model
 {
@@ -10,6 +11,15 @@ class Comment extends Model
     {
     	return $this->belongsTo('App\Post');
     }
+
+    use SoftDeletes;
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['deleted_at'];
 
     /**
      * Use a custom collection for all comments.

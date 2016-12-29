@@ -1,7 +1,7 @@
 <div class="col-md-3 blog-index-sidebar">
     {!! Form::open (['action' => 'MailChimpController@subscribe', 'class'=>'navbar-form subscribe-spacing', 'data-parsley-validate' => '', 'data-parsley-errors-container'=>'#subscribe-errors']) !!}  
-        <div class="input-group red">
-          {{ Form::label('Subscribe:') }}
+        <div class="input-group">
+          <h4><b><u>Subscribe:</u></b></h4>
           {{ Form::text('email', null, ['required'=>'', 'class'=>'form-control', 'placeholder'=>'Enter Email...']) }}
             <span class="input-group-btn subscribe-btn">
               <button class="btn btn-danger" type="submit">
@@ -30,8 +30,8 @@
     </div>  
       
     {!! Form::open(['method'=>'GET', 'route'=>'blog.search', 'role'=>'keyword', 'class'=>'navbar-form subscribe-spacing', 'data-parsley-validate' => '', 'data-parsley-errors-container'=>'#search-errors'])  !!}
-        <div class="input-group red">
-          {{ Form::label('Search:') }}
+        <div class="input-group">
+          <h4><b><u>Search:</u></b></h4>
           {{ Form::text('keyword', null, ['required'=>'', 'class'=>'form-control', 'placeholder'=>'Search Posts...']) }}
             <span class="input-group-btn subscribe-btn">
               <button class="btn btn-danger" type="submit">
@@ -42,18 +42,18 @@
       <div id="search-errors"></div>
     {!! Form::close() !!}
 
-    <div class="blog-index-sidebar-content red">
-      <h5><b><u>Blog Posts:</u></b></h5><br>
+    <div class="blog-index-sidebar-content">
+      <h4><b><u>Blog Posts:</u></b></h4><br>
         @foreach ($posts as $post)
           <span><a href="{{ route('blog.single', $post->slug) }}">{{ $post->title }} </a></span>
         @endforeach <br><br>
 
-      <h5><b><u>Categories:</u></b></h5><br>
+      <h4><b><u>Categories:</u></b></h4><br>
         @foreach ($categories as $category)
           <span><a href="{{ route('blog.category', $category->id) }}">{{ $category->name }} </a></span>
         @endforeach <br><br>
 
-      <h5><b><u>Tags:</u></b></h5><br>
+      <h4><b><u>Tags:</u></b></h4><br>
         @foreach ($tags as $tag)
           <span><a href="{{ route('blog.tag', $tag->id) }}">{{ $tag->name }} </a></span>
         @endforeach <br><br>   

@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->string('image')->nullable();
             $table->text('body');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

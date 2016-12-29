@@ -1,6 +1,5 @@
 <footer>
-	<p>All Content Copyright &copy; EPS Training 2016</p>
-{{-- <audio controls ><source src="{{ url('music/RockySong.mp3') }}" type="audio/mpeg">Your browser does not support the audio element.
-	</audio> --}}
+	<p class="footer-left">All Content Copyright &copy; EPS Training 2016</p>
+	<p class="footer-right" ;">Website Designed by <a href="http://dustinhnelson.com">Dustin Nelson</a> | Laravel Web Developer</p>
 </footer>
 

@@ -21,7 +21,7 @@
                           <li><a id="myDropdown" href="{{ route('king') }}">The King</a></li> 
                           <li><a id="myDropdown" href="{{ route('team') }}">The Team</a></li>
                           <li><a id="myDropdown" href="{{ route('facility') }}">Facility</a></li>
-                          <li><a id="myDropdown" href="{{ route('testimonials') }}">Testimonials</a></li>
+                          {{--<li><a id="myDropdown" href="{{ route('testimonials') }}">Testimonials</a></li>--}}
                           <li><a id="myDropdown" href="{{ route('pics') }}">Pictures</a></li>
                         </ul>
                     </li>
@@ -34,7 +34,7 @@
                           <li><a id="myDropdown" href="{{ route('blog.index') }}">Blog</a></li>
                         </ul>
                     </li>
-                    <li class="{{ Request::is('shop') ? "active" : ""}}"><a href="{{ route('shop') }}">SHOP</a></li>
+                    {{--<li class="{{ Request::is('shop') ? "active" : ""}}"><a href="{{ route('shop') }}">SHOP</a></li>--}}
                 </ul>
                 
                 <!-- Right Side Of Navbar -->
@@ -55,6 +55,7 @@
                                 <li><a id="myDropdown" href="{{ route('posts.index') }}">Blog Posts</a></li>
                                 <li><a id="myDropdown" href="{{ route('categories.index') }}">Categories</a></li>
                                 <li><a id="myDropdown" href="{{ route('tags.index') }}">Tags</a></li>
+                                <li><a id="myDropdown" href="{{ route('contact.emailSubscribers') }}">Email Subscribers</a></li>                              
                                 <li class="divider"></li>
                                 @endif
                                 <li><a id="myDropdown" href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
