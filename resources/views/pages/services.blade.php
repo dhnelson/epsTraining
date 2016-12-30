@@ -5,6 +5,13 @@
 @section('content') 
 
 <div class="row">
+
+    <div class="col-md-10 col-md-offset-1"><br>
+        <div class="well well-spacing" style="margin-bottom: -10px;">
+            <h2>To purchase any packages listed below please <a href="{{ route('contact') }}">Contact Ray First</a>, and then go to the EPS Training <a href="https://squareup.com/store/traineps/" target="_blank">Online Store</a>, thank you!</h2>
+        </div>
+    </div>
+
     <div class="col-md-5 col-md-offset-1"><br>
         <div class="well well-spacing">
             <h1><u>Training Options:</u></h1>

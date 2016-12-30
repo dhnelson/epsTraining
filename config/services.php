@@ -35,9 +35,4 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
-        'square' => [
-        'token' => env('SQUARE_PERSONAL_ACCESS_TOKEN'),
-        'id' => env('SQUARE_APPLICATION_ID'),
-    ],
-
 ];
