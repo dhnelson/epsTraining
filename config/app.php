@@ -159,7 +159,6 @@ return [
         Mews\Purifier\PurifierServiceProvider::class,
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Skovmand\Mailchimp\MailchimpServiceProvider::class,
     ],
 
     /*

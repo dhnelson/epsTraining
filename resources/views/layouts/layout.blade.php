@@ -15,6 +15,8 @@
 
         @include('errors.error')
 
+        @include('layouts._subscribePopup')
+
     <div class="container-fluid">
 
         @include('layouts._a2a')

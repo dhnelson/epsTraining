@@ -15,6 +15,8 @@
 
     @include('errors.error')
 
+    @include('layouts._subscribePopup')
+
     <div class="container-fluid bgpic">
     	<div class="col-sm-5 col-sm-offset-1 text-center">
     		<div class="well well-spacing">

@@ -76,11 +76,6 @@ Route::get('contact', [
 	'uses' => 'ContactController@contact'
 ]);
 
-Route::get('emailSubscribers', [
-	'as' => 'contact.emailSubscribers',
-	'uses' => 'MailChimpController@emailSubscribers'
-]);
-
 Route::get('facility', [
 	'as' => 'facility', 
 	'uses' => 'PagesController@facility'
@@ -141,16 +136,6 @@ Route::post('comments/{post_id}', [
 	'middleware' => 'auth',
 	'as' => 'comments.store',
 	'uses' => 'CommentController@store'
-]);
-
-Route::post('blog', [
-	'as' => 'subscribe',
-	'uses' => 'MailChimpController@subscribe'
-]);
-
-Route::post('emailSubscribers', [
-	'as' => 'email_subscribers_form',
-	'uses' => 'MailChimpController@emailSubscribersForm'
 ]);
 
 Route::post('shop', [
