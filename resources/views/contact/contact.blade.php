@@ -7,7 +7,7 @@
 <div class="row">
 	<div class="col-sm-6 col-sm-offset-1"><br>
         <div class="well well-spacing">
-        <h2 class="text-center">Contact Me Today!</h2>
+        <h2 class="text-center">Contact Ray Today!</h2>
         {!! Form::open (array('action' => 'ContactController@ContactForm', 'data-parsley-validate' => '')) !!} 
     
             <div class="form-group red">

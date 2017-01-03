@@ -8,7 +8,7 @@
                     {{ Form::text('EMAIL', null, ['required'=>'', 'class'=>'form-control email', 'id' => 'mce-EMAIL', 'placeholder'=>'Enter Email...']) }}
                         <span class="input-group-btn subscribe-btn">
                             <button class="btn btn-danger" type="submit">
-                                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-envelope"></span>
                             </button>
                         </span>
             </div>

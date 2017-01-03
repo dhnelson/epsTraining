@@ -34,7 +34,7 @@
                           <li><a id="myDropdown" href="{{ route('blog.index') }}">Blog</a></li>
                         </ul>
                     </li>
-                    {{--<li class="{{ Request::is('shop') ? "active" : ""}}"><a href="{{ route('shop') }}">SHOP</a></li>--}}
+                    <li><a href="https://squareup.com/store/traineps/" target="_blank">STORE</a></li>
                 </ul>
                 
                 <!-- Right Side Of Navbar -->
