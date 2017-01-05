@@ -2,10 +2,7 @@
 
 @section('title', 'Edit Posts')
 
-@include('js._posts')
-
 @section('content') 
-
 
 <div class="row">
 	{!!  Form::model($post, ['route' => ['posts.update', $post->id], 'data-parsley-validate' => '', 'method' => 'PATCH', 'files' => true]) !!}
@@ -84,8 +81,6 @@
   {!! Form::close() !!}
 </div>
 
-<script type="text/javascript">
-  $(".select2-multi").select2().val({!! json_encode($post->tags()->getRelatedIds()) !!}).trigger('change');
-</script>
+@include('js._posts')
 
 @stop

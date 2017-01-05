@@ -2,8 +2,6 @@
 
 @section('title', 'New Blog Post')
 
-@include('js._posts')
-
 @section('content') 
 
 <div class="row">
@@ -60,8 +58,6 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  $('.select2-multi').select2();
-</script>
+@include('js._posts')
 
 @stop

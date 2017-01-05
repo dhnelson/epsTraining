@@ -55,7 +55,6 @@
                                 <li><a id="myDropdown" href="{{ route('posts.index') }}">Blog Posts</a></li>
                                 <li><a id="myDropdown" href="{{ route('categories.index') }}">Categories</a></li>
                                 <li><a id="myDropdown" href="{{ route('tags.index') }}">Tags</a></li>
-                                <li><a id="myDropdown" href="{{ route('contact.emailSubscribers') }}">Email Subscribers</a></li>                              
                                 <li class="divider"></li>
                                 @endif
                                 <li><a id="myDropdown" href="{{ url('/logout') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>

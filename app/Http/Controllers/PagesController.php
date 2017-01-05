@@ -50,11 +50,6 @@ class PagesController extends Controller
         return view('pages.facility');
     }    
 
-    public function shop() 
-    {
-        return view('pages.shop');
-    } 
-
     public function instafeed() 
     {
         return view('pages.instafeed');

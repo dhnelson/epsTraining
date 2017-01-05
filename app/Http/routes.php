@@ -81,11 +81,6 @@ Route::get('facility', [
 	'uses' => 'PagesController@facility'
 ]);
 
-Route::get('shop', [
-	'as' => 'shop', 
-	'uses' => 'PagesController@shop'
-]);
-
 Route::get('blog', [
 	'as' => 'blog.index', 
 	'uses' => 'BlogController@index'
@@ -136,9 +131,4 @@ Route::post('comments/{post_id}', [
 	'middleware' => 'auth',
 	'as' => 'comments.store',
 	'uses' => 'CommentController@store'
-]);
-
-Route::post('shop', [
-	'as' => 'shop',
-	'uses' => 'PurchaseController@payment'
 ]);

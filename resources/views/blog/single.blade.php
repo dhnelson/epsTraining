@@ -3,8 +3,6 @@
 <?php $titlePost = htmlspecialchars($post->title); ?>
 @section('title', "$titlePost")
 
-@include('js._comments')
-
 @section('content') 
 
 <div class="row"><br>
@@ -15,7 +13,7 @@
         <div class="well well-spacing">
             <h1>{{ $post->title }}</h1>
 
-            <div class="single-post-body-padding text-justify indent">
+            <div class="single-post-body-padding text-justify">
                 <p>{!! $post->body !!}</p>
             </div>
 
@@ -74,6 +72,8 @@
         </div>
     </div>
 </div>
+
+@include('js._comments')
 
 @include('js._commentsToggle')
 
