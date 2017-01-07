@@ -13,7 +13,7 @@
             {{ Form::text('author', null, array('required' => '', 'class'=>'form-control')) }}
         </div>
 
-        <div class="form-group form-spacing-top">
+        <div class="form-group">
             {{ Form::label('Edit Title:') }}
             {{ Form::text('title', null, 
                 array('required' => '', 'class'=>'form-control')) }}
@@ -82,5 +82,9 @@
 </div>
 
 @include('js._posts')
+
+<script type="text/javascript">
+  $(".select2-multi").select2().val({!! json_encode($post->tags()->getRelatedIds()) !!}).trigger('change');
+</script>
 
 @stop

@@ -60,4 +60,8 @@
 
 @include('js._posts')
 
+<script type="text/javascript">
+  $(".select2-multi").select2();
+</script>
+
 @stop
