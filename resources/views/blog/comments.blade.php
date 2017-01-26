@@ -10,7 +10,7 @@
                         @endif 
                     @endif
                 </h4>
-                <p class="author-time">{{ date('F nS, Y - g:iA', strtotime($comment->created_at)) }}</p>
+                <p class="author-time">{{ date('M j, Y - g:iA', strtotime($comment->created_at)) }}</p>
             </div>
     </div>
 

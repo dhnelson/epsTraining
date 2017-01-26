@@ -55,20 +55,20 @@ p > iframe {
 .navbar {
   background-color: black;
   font-weight: bold; }
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 1050px) {
     .navbar {
       padding-bottom: 40px; } }
 
 .navbar-inverse, .nav.navbar-nav li a {
   color: #E31E19; }
-  @media screen and (min-width: 991px) {
+  @media screen and (min-width: 1050px) {
     .navbar-inverse, .nav.navbar-nav li a {
       line-height: 70px; } }
 
 .navbar-brand {
   margin-right: 15px; }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1050px) {
   #myNavbar {
     margin-top: 45px; } }
 
@@ -89,7 +89,7 @@ footer {
 .footer-right {
   float: right; }
 
-@media (max-width: 991px) {
+@media (max-width: 1050px) {
   .navbar-header {
     float: none; }
   .navbar-left, .navbar-right {
@@ -117,9 +117,6 @@ footer {
 
 .btn-h1-spacing {
   margin-top: 15px; }
-
-.email-subscribers-btn {
-  margin-left: 5px; }
 
 .form-spacing-top, .edit-box-spacing {
   margin-top: 25px; }

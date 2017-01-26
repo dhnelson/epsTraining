@@ -1,14 +1,14 @@
 .navbar {
 	background-color: black;
 	font-weight: bold;
-	@media screen and (max-width: 991px) {
+	@media screen and (max-width: 1050px) {
 		padding-bottom: 40px;
 }
 }
 
 .navbar-inverse, .nav.navbar-nav li a {
    	color: #E31E19;
-   	@media screen and (min-width: 991px) {
+   	@media screen and (min-width: 1050px) {
    	line-height: 70px;
 }
 }
@@ -17,7 +17,7 @@
 	margin-right: 15px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1050px) {
 #myNavbar {
 	margin-top: 45px;
 }
